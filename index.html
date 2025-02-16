@@ -12,7 +12,7 @@ balloon_css: true
     This is a blog that I use to share things that I find interesting.
     I will also try to update about things that are going on lately.
     My current research focus is on applying Reinforcement Learning to
-    agricultural problems.
+    agricultural farm management.
   </p>
 
   <div class="social-icons">
@@ -44,6 +44,18 @@ balloon_css: true
       <i class="fa-brands fa-orcid fa-2x"></i>
     </a>
 
+    <p class="social-text">Or shoot me an Email!</p>
+
+    <a target="_blank" class="balloon" href="mailto:hbja02@gmail.com" aria-label="Personal Email" data-balloon-pos="down">
+      <span class="screen-readers-only">Personal Email</span>
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </a>
+
+    <a target="_blank" class="balloon" href="mailto:hilmy.baja@wur.nl" aria-label="WUR Email" data-balloon-pos="down">
+      <span class="screen-readers-only">WUR Email</span>
+      <i class="fa-solid fa-envelope fa-2x"></i>
+    </a>
+
   </div>
 </div>
 
@@ -51,7 +63,9 @@ balloon_css: true
 <div class="news-section">
   <h4>Latest News</h4>
 
-  {% assign grouped_news = site.news | group_by_exp: "news", "news.date | date: '%Y'" %}
+  {% assign sorted_news = site.news | sort: "date" | reverse %}
+
+  {% assign grouped_news = sorted_news | group_by_exp: "news", "news.date | date: '%Y'" %}
 
   {% for year in grouped_news %}
     <div class="news-year">
@@ -64,7 +78,7 @@ balloon_css: true
             <img src="{{ news.image }}" alt="News Image" class="news-image">
           {% endif %}
           <div class="news-text">
-            <h6>{{ news.title }}</h6>
+            <h4>{{ news.title }}</h4>
 
             <p class="news-excerpt">{% capture md_excerpt %}{{ news.excerpt }}{% endcapture %}{{ md_excerpt | markdownify }}</p>
 

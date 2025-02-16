@@ -14,7 +14,7 @@ html, body { height: 100%; }
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Arial, sans-serif;
+  font-family: Roboto, ui-serif;
   font-size: 20px;
   line-height: 1.8em;
   text-rendering: optimizeLegibility;
@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   margin: 0 auto;
   max-width: 800px;
   padding: 20px;
+  font-family: Roboto, system-ui;
 }
 
 .container > .header {
@@ -61,7 +62,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 .about-me {
   font-style: italic;
   margin: 50px 0 0 0;
-  font-family: Georgia, serif;
+  font-family: Roboto, monospace;
 }
 .about-me h2 {
   font-size: 2em;
@@ -70,7 +71,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 }
 .about-me .description {
   font-size: 1.1em;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 .about-me .social-icons {
   margin-top: 2em;
@@ -107,7 +108,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   margin-bottom: 20px;
 }
 
-.news-year h3 {
+.news-year h5 {
   border-bottom: 2px solid #ddd;
   padding-bottom: 5px;
 }
@@ -133,9 +134,10 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 /* News Text */
 .news-text {
   flex: 1;
+  line-height: 1.0;
 }
 
-.news-text h4 {
+.news-text h5 {
   margin: 0;
 }
 

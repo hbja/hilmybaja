@@ -1,5 +1,5 @@
 
-# nithinbekal.com
+# hilmybaja.com
 
 This repository contains the Jekyll theme and content of my blog.
 
@@ -8,7 +8,7 @@ This repository contains the Jekyll theme and content of my blog.
 * Remove the existing content
 
 ```
-$ rm -rf about notes slides _posts/*.md keybase.txt CNAME resume.html
+$ rm -rf about notes _news/*.md slides _posts/*.md keybase.txt CNAME resume.html
 ```
 
 * Edit the details from `_config.yml`.

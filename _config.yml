@@ -9,8 +9,10 @@ markdown: kramdown
 
 collections:
   news:
+    output: false
+  videogames:
     output: true
-    permalink: /news/:title/
+    permalink: /videogames/:title/
 
 theme_options:
   google_analytics: G-241HN9TB7S

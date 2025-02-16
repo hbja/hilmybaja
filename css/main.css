@@ -3,7 +3,7 @@
   --background-color: rgba(248, 235, 114, 0.44);
   --bold-text-color: #060f07;
   --text-color: #000000;
-  --main-link-color: #592d06;
+  --main-link-color: #1b7306;
   --author-bio-border-color: #7c7c7c;
   --heading-border-color: #444;
 }
@@ -59,6 +59,15 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 
 .site-title > a { font-weight: bold; }
 
+.profile-image {
+  width: 150px;  /* Adjust size */
+  height: 150px;
+  border-radius: 50%;  /* Makes it circular */
+  object-fit: cover;  /* Ensures it looks good */
+  display: block;
+  margin: 0 auto 20px; /* Centers the image & adds spacing */
+}
+
 .about-me {
   font-style: italic;
   margin: 50px 0 0 0;
@@ -90,6 +99,43 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   -webkit-transition: all 0.5s ease;
 }
 
+/* Video Games Section */
+.videogame-entry {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.videogame-entry h3 {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.game-excerpt {
+  font-style: italic;
+  color: #666;
+}
+
+.game-images {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.game-images img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.game-description {
+  margin-top: 15px;
+  color: #333;
+  text-align: justify;
+}
+
 /* News Section Styling */
 .news-section {
   max-width: 900px;
@@ -109,7 +155,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 }
 
 .news-year h5 {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #3c3c3c;
   padding-bottom: 5px;
 }
 
@@ -118,9 +164,10 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-top: 7px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
+  border-bottom: 1px solid #7a7a7a;
+  padding-bottom: 7px;
 }
 
 /* News Image */
@@ -134,7 +181,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 /* News Text */
 .news-text {
   flex: 1;
-  line-height: 1.0;
+  line-height: 1.1;
 }
 
 .news-text h5 {
@@ -143,7 +190,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 
 .news-excerpt {
   margin: 5px 0;
-  color: #666;
+  color: rgba(103, 103, 103, 0.43);
 }
 
 .news-date {
@@ -331,5 +378,19 @@ hr {
   .news-image {
     width: 80px;
     height: 80px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .game-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-images img {
+    width: 100%;
   }
 }

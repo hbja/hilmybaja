@@ -13,6 +13,10 @@ collections:
   videogames:
     output: true
     permalink: /videogames/:title/
+  publications:
+    output: true
+    permalink: /publications/:title/
+
 
 theme_options:
   google_analytics: G-241HN9TB7S

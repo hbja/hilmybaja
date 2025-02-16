@@ -2,7 +2,7 @@
 name: Hilmy Baja
 title: Hilmy Baja
 description: "Hilmy's personal website."
-url: https://hilmybaja.com
+url: "https://hilmybaja.com"
 highlighter: rouge
 permalink: /posts/:title/
 markdown: kramdown

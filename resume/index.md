@@ -4,15 +4,6 @@ title: "Resume"
 date:  2024-30-12
 ---
 
-## **Profile**  
-I'm Hilmy, a PhD candidate with a deep interest in artificial intelligence for practical purposes.
-Aspires to be a researcher, to help implement and apply practical and feasible artificial intelligence technology for quality of life.
-Researching reinforcement learning methods to optimize crop management, especially fertilizer use.
-
----
-
-## **Education**
-
 ## **Education**  
 - **PhD in Data & AI for Agriculture**, Wageningen University (2022-present)  
   - AI & Reinforcement Learning for farm management  
@@ -46,4 +37,4 @@ Researching reinforcement learning methods to optimize crop management, especial
 - **Languages:** Indonesian (Native), English (Native; IELTS 8.5, TOEFL 109), German (B2)  
 - **Programming:** Python, C, C++, R (Basic: C#, MATLAB, Assembly, HTML, CSS)  
 - **Software:** Adobe Suite, CorelDraw, MS Office  
-- **Hobbies:** Cooking, Basketball, Specialty Coffee, Board & Video Games  
+- **Hobbies:** Cooking, Specialty Coffee, Guitar playing, Board & Video Games  

@@ -10,21 +10,27 @@ permalink: /videogames/
 
 {% for game in sorted_games %}
   <div class="videogame-entry">
-    <h2>{{ game.title }}</h2>
-    <p><strong>Platforms:</strong> {{ game.platforms }}</p>
-    <p><strong>Genres:</strong> {{ game.genres }}</p>
-    <p class="game-excerpt">{{ game.excerpt }}</p>
 
-    <div class="game-images">
-      {% for image in game.images %}
-        <img src="{{ image }}" alt="{{ game.title }} screenshot">
-      {% endfor %}
-    </div>
+    <!-- Collapsible button -->
+    <button class="collapsible">{{ game.title }} (year finished: {{ game.date | date: "%Y" }})</button>
 
-    <div class="game-description">
-      {{ game.content | markdownify }}
+    <div class="game-content">
+      <p><strong>Platforms:</strong> {{ game.platforms }}</p>
+      <p><strong>Genres:</strong> {{ game.genres }}</p>
+      <p class="game-excerpt">{{ game.excerpt }}</p>
+
+      <div class="game-images">
+        {% for image in game.images %}
+          <img src="{{ image }}" alt="{{ game.title }} screenshot">
+        {% endfor %}
+      </div>
+
+      <div class="game-description">
+        {{ game.content | markdownify }}
+      </div>
     </div>
 
     <hr>
   </div>
 {% endfor %}
+<script src="../js/collapse.js"></script>

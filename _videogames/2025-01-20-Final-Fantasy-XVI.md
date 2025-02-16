@@ -29,9 +29,10 @@ It has been a long time since I was amazed by the cinematic effects in a video g
 felt like I was watching a blockbuster movie.
 
 The story was good. I really like the direction of the story, since they focus on a political and religious state of
- the world. A large focus was on Clive and his emotional and "spiritual" journey.
+ the world. A large portion was on Clive and his emotional and "spiritual" journey discovering who he was and how he could
+help Valisthea's social structure, allowing people to live and die by their own terms.
  Although, I felt the story somehow fell a bit flat at the end. Maybe due to
 the antagonists dying one-by-one throughout the story, leaving a big gap of where the cast was with only the big baddie at
-the end. Was not my favorite FF story, for sure, but it is one that was quite memorable.
+the end. Was not my favorite FF story, or even FF game in general for sure, but it is one that was quite memorable.
 
 

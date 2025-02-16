@@ -10,11 +10,11 @@ balloon_css: true
   <h2 style="text-align: center;">Hi, I'm Hilmy</h2>
 
   <p class="description">
-    I am a PhD candidate in Wageningen University.
-    This is a blog that I use to share things that I find interesting.
-    I will also try to update about things that are going on lately.
-    My current research focus is on applying Reinforcement Learning to
-    agricultural farm management.
+    I am a PhD candidate at Wageningen University.
+    This is a blog that I use to share things that I find interesting and
+    a place to document some hobbies that I enjoy.
+    I will also try to update about things that are going on lately in my
+    professional life.
   </p>
 
   <div class="social-icons">
@@ -55,7 +55,7 @@ balloon_css: true
 
     <a target="_blank" class="balloon" href="mailto:hilmy.baja@wur.nl" aria-label="WUR Email" data-balloon-pos="down">
       <span class="screen-readers-only">WUR Email</span>
-      <i class="fa-solid fa-envelope fa-2x"></i>
+      <i class="fa-solid fa-building-columns fa-2x"></i>
     </a>
 
   </div>
@@ -63,7 +63,7 @@ balloon_css: true
 
 <!-- News Section -->
 <div class="news-section">
-  <h4>Latest News</h4>
+  <h3>Latest News</h3>
 
   {% assign sorted_news = site.news | sort: "date" | reverse %}
 
@@ -94,7 +94,7 @@ balloon_css: true
 </div>
 
 <div class='posts'>
-  <h4>Blog Posts</h4>
+  <h3>Blog Posts</h3>
   <div class='post-listing'>
     {% assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 

@@ -14,7 +14,7 @@ html, body { height: 100%; }
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: Roboto, ui-serif;
+  font-family: Roboto, system-ui;
   font-size: 20px;
   line-height: 1.8em;
   text-rendering: optimizeLegibility;
@@ -69,9 +69,9 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 }
 
 .about-me {
-  font-style: italic;
+  /*font-style: italic;*/
   margin: 50px 0 0 0;
-  font-family: Roboto, monospace;
+  font-family: Roboto, ui-monospace;
 }
 .about-me h2 {
   font-size: 2em;
@@ -81,6 +81,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 .about-me .description {
   font-size: 1.1em;
   line-height: 1.5em;
+  text-align: justify;
 }
 .about-me .social-icons {
   margin-top: 2em;
@@ -100,6 +101,36 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 }
 
 /* Video Games Section */
+
+/* Collapsible Button */
+.collapsible {
+  background-color: rgba(27, 115, 6, 0.75);
+  color: #000000;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  text-align: left;
+  font-weight: bolder;
+  outline: none;
+  transition: background 0.3s;
+}
+
+.collapsible:hover {
+  background-color: rgb(36, 152, 8);
+}
+
+/* Adjust Button Icon */
+.collapsible::after {
+  content: " ▼"; /* Down arrow */
+  float: right;
+}
+
+.collapsible.active::after {
+  content: " ▲"; /* Up arrow */
+}
+
 .videogame-entry {
   max-width: 900px;
   margin: 20px auto;
@@ -136,6 +167,21 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   text-align: justify;
 }
 
+/* Hide the game content by default */
+.game-content {
+  display: none;
+  padding: 10px;
+  border-left: 3px solid #1b7306;
+  background-color: rgba(248, 235, 114, 0.44);
+  transition: max-height 0.3s ease-in-out;
+}
+
+/* Expand Animation */
+.game-content.active {
+  display: block;
+}
+
+
 /* News Section Styling */
 .news-section {
   max-width: 900px;
@@ -144,7 +190,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   text-align: left;
 }
 
-.news-section h2 {
+.news-section h3 {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -157,6 +203,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 .news-year h5 {
   border-bottom: 1px solid #3c3c3c;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 /* News Items */
@@ -182,6 +229,8 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
 .news-text {
   flex: 1;
   line-height: 1.1;
+  font-size: 17px;
+  text-align: justify;
 }
 
 .news-text h5 {
@@ -198,7 +247,7 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   color: #888;
 }
 
-.site .posts { padding: 50px 0 0 0; }
+.site .posts { padding: 50px 0 0 0; text-align: center}
 .site .posts .month { color: #aaa; padding: 30px 0; }
 
 .site .posts .post-listing { line-height: 2em; }

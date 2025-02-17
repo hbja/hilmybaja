@@ -17,10 +17,6 @@ collections:
     output: true
     permalink: /publications/:title/
 
-
-theme_options:
-  google_analytics: G-241HN9TB7S
-
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

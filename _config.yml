@@ -17,6 +17,7 @@ collections:
     output: true
     permalink: /publications/:title/
 
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

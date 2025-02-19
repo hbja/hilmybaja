@@ -18,10 +18,16 @@ I then thought to myself that I could use my engineering knowledge to help peopl
 
 After receiving a full-ride scholarship, I then enrolled in Biosystems Engineering, a master's program exactly at
 the junction between Agriculture and Technology. For the rest of my professional journey, I still
-envision to contribute more in this field through research. But considering the state of the world, I have to
-be realistic with any opportunities that come to my way.
+envision to contribute more in this field through research.
 
-Now on to more light-hearted stuff :)
+For my PhD work, I am focusing on using Reinforcement Learning to discover adaptive fertilization strategies.
+I enjoy doing my research a lot. Despite being very complicated and requiring a lot of prior knowledge,
+RL is really fun. Adding to the fact that I need a lot of (agricultural and soil) domain knowledge to make my
+research make sense is an additional challenge that makes me want to discover more in this field.
+
+I am definitely staying in the path of RL for my future research career.
+
+Now on to less professional stuff :)
 
 I am a self-proclaimed coffee geek, even though I don't drink as much coffee as other people. But
 I do have a lot of coffee gear at home, of which I spend a lot of time every morning to do my coffee 

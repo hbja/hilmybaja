@@ -28,7 +28,7 @@ publications:
   authors: "M Ariza-Sentís, S Vélez, R Martínez-Peña, H Baja, J Valente"
   journal: "Computers and Electronics in Agriculture"
   year: 2024
-  doi: "doi.org/10.1016/j.compag.2024.108757"
+  doi: "10.1016/j.compag.2024.108757"
   link: "https://www.sciencedirect.com/science/article/pii/S0168169924001480"
 
 - title: "Comparative analysis of single-view and multiple-view data collection strategies for detecting partially-occluded grape bunches: Field trials"
@@ -42,7 +42,7 @@ publications:
   authors: "H Baja, M Kallenberg, I Athanasiadis"
   journal: "AAAI Conference on Artificial Intelligence"
   year: 2025
-  doi: "doi.org/10.48550/arXiv.2501.12823"
+  doi: "10.48550/arXiv.2501.12823"
   link: "https://arxiv.org/abs/2501.12823"
 ---
 

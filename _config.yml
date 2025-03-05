@@ -13,7 +13,7 @@ collections:
   videogames:
     output: true
     permalink: /videogames/:title/
-  publications:
+  pages:
     output: true
     permalink: /publications/:title/
 

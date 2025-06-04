@@ -2,6 +2,7 @@
 layout: default
 title: "Publications"
 permalink: /publications/
+balloon_css: true
 publications:
 - title: "APPLE MOTS: Detection, Segmentation and Tracking of Homogeneous Objects Using MOTS"
   authors: "S de Jong, H Baja, K Tamminga, J Valente"
@@ -48,18 +49,24 @@ publications:
 
 <h2>My Scientific Publications</h2>
 
-{% assign sorted_pubs = page.publications | sort: "year" | reverse %}
+{% assign pubs_by_year = page.publications | group_by: "year" %}
+{% assign sorted_years = pubs_by_year | sort: "name" | reverse %}
 
-{% for pub in sorted_pubs %}
-  <div class="publication-entry">
-    <h3><a href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h3>
-    <p><strong>Authors</strong>: {% assign formatted_authors = pub.authors | replace: "H Baja", "<strong>H Baja</strong>" %}
-        {{ formatted_authors }}</p>
-    <p><strong>Journal:</strong> {{ pub.journal }}</p>
-    <p><strong>Year:</strong> {{ pub.year }}</p>
-
-    {% if pub.doi %}
-      <p><strong>DOI:</strong> <a href="https://doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a></p>
-    {% endif %}
+{% for year in sorted_years %}
+  <div class="publication-year">
+    <h3>{{ year.name }}</h3>
   </div>
+
+  {% for pub in year.items %}
+    <div class="publication-entry">
+      <h4><a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a></h4>
+      <p><strong>Authors</strong>: {% assign formatted_authors = pub.authors | replace: "H Baja", "<strong>H Baja</strong>" %}
+          {{ formatted_authors }}</p>
+      <p><strong>Journal:</strong> {{ pub.journal }}</p>
+
+      {% if pub.doi %}
+        <p><a class="doi-link" href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i>{{ pub.doi }}</a></p>
+      {% endif %}
+    </div>
+  {% endfor %}
 {% endfor %}

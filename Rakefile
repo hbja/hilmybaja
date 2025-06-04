@@ -1,6 +1,7 @@
 
 require "nokogiri"
 require "yaml"
+require "fileutils"
 
 desc "Create a new draft"
 task :draft do
@@ -18,7 +19,7 @@ desc "Publish a draft"
 task :publish do
   draft_files = Dir.glob("_drafts/*.md")
   file = fzf(draft_files, "Select a draft to publish")
-  next if file.empty?
+  next if file.to_s.empty?
 
   filename = File.basename(file)
   new_path = File.join("_posts", "#{now}-#{filename}")
@@ -40,6 +41,7 @@ task :unpublish do
 
   filename = File.basename(file).sub(/^\d{4}-\d{2}-\d{2}-/, "")
   new_path = File.join("_drafts", filename)
+  FileUtils.mkdir_p("_drafts")
 
   File.rename(file, new_path)
   puts "Post unpublished as #{new_path}"
@@ -79,6 +81,7 @@ def write_to_file(dir:, attributes:, layout: "post")
   attributes["date"] = now
   content = YAML.dump(attributes) + "---"
 
+  FileUtils.mkdir_p(dir)
   path = File.join(dir, "#{slug}.md")
   File.write(path, content)
 end

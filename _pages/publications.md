@@ -42,8 +42,15 @@ publications:
   authors: "H Baja, M Kallenberg, I Athanasiadis"
   journal: "AAAI Conference on Artificial Intelligence"
   year: 2025
-  doi: "10.48550/arXiv.2501.12823"
-  link: "https://arxiv.org/abs/2501.12823"
+  doi: "10.1609/aaai.v39i27.34999"
+  link: "https://ojs.aaai.org/index.php/AAAI/article/view/34999"
+
+- title: "Adaptive fertilization management for optimizing nitrogen use efficiency with constrained reinforcement learning"
+  authors: "H Baja, M Kallenberg, H Berghuijs, I Athanasiadis"
+  journal: "Computers and Electronics in Agriculture"
+  year: 2025
+  doi: "10.1016/j.compag.2025.110554"
+  link: "https://www.sciencedirect.com/science/article/pii/S016816992500660X"
 ---
 
 <h2>My Scientific Publications</h2>

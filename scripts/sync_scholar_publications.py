@@ -46,6 +46,14 @@ def slugify(value: str) -> str:
     return normalized or "publication"
 
 
+def normalize_title(value: str | None) -> str | None:
+    if not value:
+        return None
+    normalized = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    normalized = re.sub(r"[^a-zA-Z0-9]+", "", normalized.lower())
+    return normalized or None
+
+
 def normalize_doi(raw_value: str | None) -> str | None:
     if not raw_value:
         return None
@@ -59,7 +67,13 @@ def normalize_doi(raw_value: str | None) -> str | None:
 def split_authors(raw_authors: str | None) -> list[str]:
     if not raw_authors:
         return []
-    return [author.strip() for author in raw_authors.split(",") if author.strip()]
+
+    if " and " in raw_authors:
+        pieces = re.split(r"\s+and\s+", raw_authors)
+    else:
+        pieces = raw_authors.split(",")
+
+    return [author.strip() for author in pieces if author.strip()]
 
 
 def normalize_person_name(name: str) -> tuple[str, str]:
@@ -96,9 +110,10 @@ def find_author_position(authors: list[str], variants: list[str]) -> int | None:
 def scholar_publication_url(user_id: str, publication_id: str | None) -> str | None:
     if not publication_id:
         return None
+    citation_for_view = publication_id if ":" in publication_id else f"{user_id}:{publication_id}"
     return (
         "https://scholar.google.com/citations"
-        f"?view_op=view_citation&hl=en&user={user_id}&citation_for_view={user_id}:{publication_id}"
+        f"?view_op=view_citation&hl=en&user={user_id}&citation_for_view={citation_for_view}"
     )
 
 
@@ -156,6 +171,29 @@ def compact_entry(entry: dict[str, Any]) -> dict[str, Any]:
     return compacted
 
 
+def find_matching_existing_entry(
+    *,
+    scholar_id: str | None,
+    doi: str | None,
+    title: str | None,
+    by_scholar_id: dict[str, dict[str, Any]],
+    by_doi: dict[str, dict[str, Any]],
+    by_title: dict[str, dict[str, Any]],
+) -> dict[str, Any] | None:
+    if scholar_id and scholar_id in by_scholar_id:
+        return by_scholar_id[scholar_id]
+
+    normalized_doi = normalize_doi(doi)
+    if normalized_doi and normalized_doi in by_doi:
+        return by_doi[normalized_doi]
+
+    normalized_title = normalize_title(title)
+    if normalized_title and normalized_title in by_title:
+        return by_title[normalized_title]
+
+    return None
+
+
 def main() -> int:
     config = load_yaml(CONFIG_PATH, {})
     scholar_config = config.get("scholar", {})
@@ -173,8 +211,19 @@ def main() -> int:
 
     existing_data = load_yaml(PUBLICATIONS_PATH, {"items": []})
     overrides = load_yaml(OVERRIDES_PATH, {})
-    existing_by_slug = {
-        item.get("slug"): item for item in existing_data.get("items", []) if item.get("slug")
+    existing_items = existing_data.get("items", [])
+    existing_by_scholar_id = {
+        item.get("scholar_id"): item for item in existing_items if item.get("scholar_id")
+    }
+    existing_by_doi = {
+        normalize_doi(item.get("doi")): item
+        for item in existing_items
+        if normalize_doi(item.get("doi"))
+    }
+    existing_by_title = {
+        normalize_title(item.get("title")): item
+        for item in existing_items
+        if normalize_title(item.get("title"))
     }
 
     author = scholarly.search_author_id(scholar_user_id)
@@ -192,6 +241,7 @@ def main() -> int:
         authors = split_authors(bib.get("author"))
         slug = slugify(title)
         scholar_id = filled_publication.get("author_pub_id")
+        doi = normalize_doi(bib.get("doi"))
         base_entry = {
             "slug": slug,
             "scholar_id": scholar_id,
@@ -213,11 +263,20 @@ def main() -> int:
                 filled_publication,
                 ("pub_url", "eprint_url", "url_scholarbib"),
             ),
-            "doi": normalize_doi(bib.get("doi")),
+            "doi": doi,
             "abstract": bib.get("abstract"),
         }
 
-        merged_entry = merge_manual_fields(base_entry, existing_by_slug.get(slug))
+        existing_entry = find_matching_existing_entry(
+            scholar_id=scholar_id,
+            doi=doi,
+            title=title,
+            by_scholar_id=existing_by_scholar_id,
+            by_doi=existing_by_doi,
+            by_title=existing_by_title,
+        )
+
+        merged_entry = merge_manual_fields(base_entry, existing_entry)
         merged_entry = merge_manual_fields(merged_entry, overrides.get(slug))
         synced_items.append(compact_entry(merged_entry))
 

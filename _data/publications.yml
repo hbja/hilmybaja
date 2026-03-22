@@ -1,130 +1,395 @@
-generated_at: "2026-03-22T00:00:00Z"
-source: "manual-seed"
+generated_at: '2026-03-22T12:56:00+00:00'
+source: google-scholar
 items:
-  - slug: "adaptive-fertilization-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning"
-    title: "Adaptive fertilization management for optimizing nitrogen use efficiency with constrained reinforcement learning"
-    authors:
-      - "H Baja"
-      - "M Kallenberg"
-      - "H Berghuijs"
-      - "I Athanasiadis"
-    authors_text: "H Baja, M Kallenberg, H Berghuijs, I Athanasiadis"
-    author_position: 1
-    venue: "Computers and Electronics in Agriculture"
-    year: 2025
-    kind: "Journal article"
-    doi: "10.1016/j.compag.2025.110554"
-    source_url: "https://www.sciencedirect.com/science/article/pii/S016816992500660X"
-    badges:
-      - "Reinforcement Learning"
-      - "Nitrogen Management"
-  - slug: "comparative-analysis-of-single-view-and-multiple-view-data-collection-strategies-for-detecting-partially-occluded-grape-bunches-field-trials"
-    title: "Comparative analysis of single-view and multiple-view data collection strategies for detecting partially-occluded grape bunches: Field trials"
-    authors:
-      - "M Ariza-Sentís"
-      - "H Baja"
-      - "S Vélez"
-      - "Rick van Essen"
-      - "J Valente"
-    authors_text: "M Ariza-Sentís, H Baja, S Vélez, Rick van Essen, J Valente"
-    author_position: 2
-    venue: "Journal of Agriculture and Food Research"
-    year: 2025
-    kind: "Journal article"
-    doi: "10.1016/j.jafr.2025.101736"
-    source_url: "https://www.sciencedirect.com/science/article/pii/S2666154325001073"
-    badges:
-      - "Field Trials"
-      - "Multi-View"
-    summary: "An analysis of how single-view and multiple-view field data collection strategies affect grape bunch detection under occlusion."
-  - slug: "to-measure-or-not-a-cost-sensitive-selective-measuring-environment-for-agricultural-management-decisions-with-reinforcement-learning"
-    title: "To Measure or Not: A Cost-Sensitive, Selective Measuring Environment for Agricultural Management Decisions with Reinforcement Learning"
-    authors:
-      - "H Baja"
-      - "M Kallenberg"
-      - "I Athanasiadis"
-    authors_text: "H Baja, M Kallenberg, I Athanasiadis"
-    author_position: 1
-    venue: "AAAI Conference on Artificial Intelligence"
-    year: 2025
-    kind: "Conference paper"
-    doi: "10.1609/aaai.v39i27.34999"
-    source_url: "https://ojs.aaai.org/index.php/AAAI/article/view/34999"
-    badges:
-      - "Reinforcement Learning"
-      - "Decision Support"
-    summary: "A reinforcement learning setting that balances the value of new measurements against the cost of collecting them for agricultural decision making."
-  - slug: "object-detection-and-tracking-in-precision-farming-a-systematic-review"
-    title: "Object Detection and Tracking in Precision Farming: A Systematic Review"
-    authors:
-      - "M Ariza-Sentís"
-      - "S Vélez"
-      - "R Martínez-Peña"
-      - "H Baja"
-      - "J Valente"
-    authors_text: "M Ariza-Sentís, S Vélez, R Martínez-Peña, H Baja, J Valente"
-    author_position: 4
-    venue: "Computers and Electronics in Agriculture"
-    year: 2024
-    kind: "Journal article"
-    doi: "10.1016/j.compag.2024.108757"
-    source_url: "https://www.sciencedirect.com/science/article/pii/S0168169924001480"
-    badges:
-      - "Systematic Review"
-      - "Precision Farming"
-    summary: "A systematic review of precision farming research that applies object detection and tracking methods."
-  - slug: "an-aerial-framework-for-multi-view-grape-bunch-detection-and-route-optimization-using-aco"
-    title: "An aerial framework for Multi-View grape bunch detection and route Optimization using ACO"
-    authors:
-      - "M Ariza-Sentís"
-      - "S Vélez"
-      - "H Baja"
-      - "R Valenti"
-      - "J Valente"
-    authors_text: "M Ariza-Sentís, S Vélez, H Baja, R Valenti, J Valente"
-    author_position: 3
-    venue: "Computers and Electronics in Agriculture"
-    year: 2023
-    kind: "Journal article"
-    doi: "10.1016/j.compag.2024.108972"
-    source_url: "https://www.sciencedirect.com/science/article/pii/S0168169924003636"
-    badges:
-      - "UAV"
-      - "ACO"
-    summary: "A UAV framework for multi-view grape bunch detection paired with ant-colony-based route optimization."
-  - slug: "object-detection-and-tracking-on-uav-rgb-videos-for-early-extraction-of-grape-phenotypic-traits"
-    title: "Object detection and tracking on UAV RGB videos for early extraction of grape phenotypic traits"
-    authors:
-      - "M Ariza-Sentís"
-      - "H Baja"
-      - "S Vélez"
-      - "J Valente"
-    authors_text: "M Ariza-Sentís, H Baja, S Vélez, J Valente"
-    author_position: 2
-    venue: "Computers and Electronics in Agriculture"
-    year: 2023
-    kind: "Journal article"
-    doi: "10.1016/j.compag.2023.108051"
-    source_url: "https://www.sciencedirect.com/science/article/pii/S0168169923004398"
-    badges:
-      - "UAV"
-      - "Phenotyping"
-    summary: "Deep-learning-based detection and tracking on UAV RGB videos for early grape phenotyping."
-  - slug: "apple-mots-detection-segmentation-and-tracking-of-homogeneous-objects-using-mots"
-    title: "APPLE MOTS: Detection, Segmentation and Tracking of Homogeneous Objects Using MOTS"
-    authors:
-      - "S de Jong"
-      - "H Baja"
-      - "K Tamminga"
-      - "J Valente"
-    authors_text: "S de Jong, H Baja, K Tamminga, J Valente"
-    author_position: 2
-    venue: "IEEE Robotics and Automation Letters"
-    year: 2022
-    kind: "Journal article"
-    doi: "10.1109/LRA.2022.3199026"
-    source_url: "https://ieeexplore.ieee.org/document/9857971"
-    badges:
-      - "Segmentation"
-      - "Tracking"
-    summary: "Detection, segmentation, and tracking of homogeneous apple targets from UAV imagery."
+- slug: adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning
+  scholar_id: PFwVicIAAAAJ:ufrVoPGSRksC
+  title: Adaptive fertilizer management for optimizing nitrogen use efficiency with constrained
+    reinforcement learning
+  authors:
+  - Hilmy Baja
+  - Michiel GJ Kallenberg
+  - Herman NC Berghuijs
+  - Ioannis N Athanasiadis
+  authors_text: Hilmy Baja, Michiel GJ Kallenberg, Herman NC Berghuijs, Ioannis N Athanasiadis
+  author_position: 1
+  venue: Computers and Electronics in Agriculture
+  year: 2025
+  citations: 5
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:ufrVoPGSRksC
+  cited_by_url: https://scholar.google.com/scholar?cites=7866896150403150782
+  source_url: https://www.sciencedirect.com/science/article/pii/S016816992500660X
+  abstract: Optimizing nitrogen use efficiency (NUE) in crop production is crucial for sustainable
+    agriculture, balancing the need to maximize yield while minimizing environmental impacts
+    such as nitrogen loss and soil nutrient depletion. Reinforcement learning (RL) emerges
+    as a potent, data-driven approach for achieving optimal farm management decisions, particularly
+    in the context of fertilization, thereby facilitating optimal NUE. Previous literature
+    of RL in crop management have predominantly focused on optimizing yield, profit, or nitrogen
+    loss reduction. However, optimizing NUE has been largely overlooked despite its significance
+    in preventing soil nutrient mining. In this study, we develop an RL environment in various
+    aspects to investigate the capability of RL to optimize NUE through crop growth model
+    simulations. We develop an RL agent with a novel NUE reward function and incorporates
+    action constrains. We …
+- slug: comparative-analysis-of-single-view-and-multiple-view-data-collection-strategies-for-detecting-partially-occluded-grape-bunches-field-trials
+  scholar_id: PFwVicIAAAAJ:eQOLeE2rZwMC
+  title: 'Comparative analysis of single-view and multiple-view data collection strategies
+    for detecting partially-occluded grape bunches: Field trials'
+  authors:
+  - Mar Ariza-Sentís
+  - Hilmy Baja
+  - Sergio Vélez
+  - Rick van Essen
+  - João Valente
+  authors_text: Mar Ariza-Sentís, Hilmy Baja, Sergio Vélez, Rick van Essen, João Valente
+  author_position: 2
+  venue: Journal of Agriculture and Food Research
+  year: 2025
+  citations: 1
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:eQOLeE2rZwMC
+  cited_by_url: https://scholar.google.com/scholar?cites=16256750753950846048
+  source_url: https://www.sciencedirect.com/science/article/pii/S2666154325001073
+  doi: 10.1016/j.jafr.2025.101736
+  abstract: 'Extracting phenotypic traits of grape bunch is crucial for accurately monitoring
+    grape quality, health, and yield estimation. This is important for optimising resources,
+    enhancing marketing strategies, and boosting overall agricultural productivity. While
+    most research concentrates on data processing algorithms, this study focused on the preceding
+    step: collecting reliable data. Object detection and tracking enable precise monitoring
+    and quantification of fruit, facilitating agricultural management. This study compares
+    two data acquisition methodologies for grape bunch detection and tracking in a commercial
+    vineyard where leaf removal was not performed: a traditional single-view approach and
+    a multiple-viewing method designed to mitigate fruit occlusion issues. The PointTrack
+    algorithm, trained and validated using MOTS annotations, was employed to evaluate detection
+    and tracking performance through metrics of …'
+  summary: An analysis of how single-view and multiple-view field data collection strategies
+    affect grape bunch detection under occlusion.
+  kind: Journal article
+  badges:
+  - Field Trials
+  - Multi-View
+- slug: cy-bench-a-comprehensive-benchmark-dataset-for-sub-national-crop-yield-forecasting
+  scholar_id: PFwVicIAAAAJ:W7OEmFMy1HYC
+  title: 'Cy-bench: A comprehensive benchmark dataset for sub-national crop yield forecasting'
+  authors:
+  - Dilli Paudel
+  - Michiel Kallenberg
+  - Stella Ofori-Ampofo
+  - Hilmy Baja
+  - Ron van Bree
+  - Aike Potze
+  - Pratishtha Poudel
+  - Abdelrahman Saleh
+  - Weston Anderson
+  - Malte von Bloh
+  - Andres Castellano
+  - Oumnia Ennaji
+  - Raed Hamed
+  - Rahel Laudien
+  - Donghoon Lee
+  - Inti Luna
+  - Michele Meroni
+  - Janet Mumo Mutuku
+  - Siyabusa Mkuhlani
+  - Jonathan Richetti
+  - Alex C Ruane
+  - Ritvik Sahajpal
+  - Guanyuan Shai
+  - Vasileios Sitokonstantinou
+  - Rogério de Souza Nóia Júnior
+  - Amit Kumar Srivastava
+  - Robert Strong
+  - Lily-belle Sweet
+  - Petar Vojnovic
+  - Ioannis N Athanasiadis
+  authors_text: Dilli Paudel, Michiel Kallenberg, Stella Ofori-Ampofo, Hilmy Baja, Ron van
+    Bree, Aike Potze, Pratishtha Poudel, Abdelrahman Saleh, Weston Anderson, Malte von Bloh,
+    Andres Castellano, Oumnia Ennaji, Raed Hamed, Rahel Laudien, Donghoon Lee, Inti Luna,
+    Michele Meroni, Janet Mumo Mutuku, Siyabusa Mkuhlani, Jonathan Richetti, Alex C Ruane,
+    Ritvik Sahajpal, Guanyuan Shai, Vasileios Sitokonstantinou, Rogério de Souza Nóia Júnior,
+    Amit Kumar Srivastava, Robert Strong, Lily-belle Sweet, Petar Vojnovic, Ioannis N Athanasiadis
+  author_position: 4
+  venue: Earth System Science Data Discussions
+  year: 2025
+  citations: 6
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:W7OEmFMy1HYC
+  cited_by_url: https://scholar.google.com/scholar?cites=15242709951261013011
+  source_url: https://essd.copernicus.org/preprints/essd-2025-83/
+  abstract: 'In-season, pre-harvest crop yield forecasts are essential for enhancing transparency
+    in commodity markets and improving food security. They play a key role in increasing resilience
+    to climate change and extreme events and thus contribute to the United Nations’ Sustainable
+    Development Goal 2 of zero hunger. Pre-harvest crop yield forecasting is a complex task,
+    as several interacting factors contribute to yield formation, including in-season weather
+    variability, extreme events, long-term climate change, soil, pests, diseases and farm
+    management decisions. Several modeling approaches have been employed to capture complex
+    interactions among such predictors and crop yields. Prior research for in-season, pre-harvest
+    crop yield forecasting has primarily been case-study based, which makes it difficult to
+    compare modeling approaches and measure progress systematically. To address this gap,
+    we introduce CY-Bench (Crop Yield Benchmark), a comprehensive dataset and benchmark to
+    forecast maize and wheat yields at a global scale. CY-Bench was conceptualized and developed
+    within the Machine Learning team of the Agricultural Model Intercomparison and Improvement
+    Project (AgML) in collaboration with agronomists, climate scientists, and machine learning
+    researchers. It features publicly available sub-national yield statistics and relevant
+    predictors—such as weather data, soil characteristics, and remote sensing indicators—that
+    have been pre-processed, standardized, and harmonized across spatio-temporal scales. With
+    CY-Bench, we aim to: (i) establish a standardized framework for developing and evaluating
+    data-driven models …'
+- slug: interoperable-agricultural-digital-twins-with-reinforcement-learning-intelligence
+  scholar_id: PFwVicIAAAAJ:LkGwnXOMwfcC
+  title: Interoperable agricultural digital twins with reinforcement learning intelligence
+  authors:
+  - Michiel Kallenberg
+  - Hilmy Baja
+  - Mihailo Ilić
+  - Aleksandar Tomčić
+  - Milenko Tošić
+  - Ioannis N Athanasiadis
+  authors_text: Michiel Kallenberg, Hilmy Baja, Mihailo Ilić, Aleksandar Tomčić, Milenko Tošić,
+    Ioannis N Athanasiadis
+  author_position: 2
+  venue: Smart Agricultural Technology
+  year: 2025
+  citations: 3
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:LkGwnXOMwfcC
+  cited_by_url: https://scholar.google.com/scholar?cites=1695124404679175434
+  source_url: https://www.sciencedirect.com/science/article/pii/S2772375525006434
+  abstract: 'Digital twins and artificial intelligence are increasingly explored to support
+    decision-making. In this work, we introduce a modular and interoperable architecture that
+    combines digital twins with reinforcement learning for adaptive decision-making in complex
+    environmental systems. We apply this approach to smart farming, where efficient resource
+    use is critical to balance productivity with environmental impact. Our contributions are
+    threefold: (a) the augmentation of agricultural models as digital twins—specifically the
+    crop growth model WOFOST and the plant disease model A-scab—that assimilate field data
+    to reflect current crop conditions; (b) the integration of reinforcement learning agents
+    that generate recommendations for pesticide and fertilizer application—the first to demonstrate
+    interoperable reinforcement learning-integrated digital twins in operational agriculture;
+    and (c) the development of a FIWARE-based …'
+- slug: to-measure-or-not-a-cost-sensitive-selective-measuring-environment-for-agricultural-management-decisions-with-reinforcement-learning
+  scholar_id: PFwVicIAAAAJ:YsMSGLbcyi4C
+  title: 'To Measure or Not: A Cost-Sensitive, Selective Measuring Environment for Agricultural
+    Management Decisions with Reinforcement Learning'
+  authors:
+  - Hilmy Baja
+  - Michiel Kallenberg
+  - Ioannis N Athanasiadis
+  authors_text: Hilmy Baja, Michiel Kallenberg, Ioannis N Athanasiadis
+  author_position: 1
+  venue: Proceedings of the AAAI Conference on Artificial Intelligence
+  year: 2025
+  citations: 5
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:YsMSGLbcyi4C
+  cited_by_url: https://scholar.google.com/scholar?cites=9206883687040454337
+  source_url: https://ojs.aaai.org/index.php/AAAI/article/view/34999
+  doi: 10.1609/aaai.v39i27.34999
+  abstract: Farmers rely on in-field observations to make well-informed crop management decisions
+    to maximize profit and minimize adverse environmental impact. However, obtaining real-world
+    crop state measurements is labor-intensive, time-consuming and expensive. In most cases,
+    it is not feasible to gather crop state measurements before every decision moment. Moreover,
+    in previous research pertaining to farm management optimization, these observations are
+    often assumed to be readily available without any cost, which is unrealistic. Hence, enabling
+    optimization without the need to have* temporally complete* crop state observations is
+    important. An approach to that problem is to include measuring as part of decision making.
+    As a solution, we apply reinforcement learning (RL) to recommend opportune moments to
+    simultaneously measure crop features and apply nitrogen fertilizer. With realistic considerations,
+    we design an RL environment with explicit crop feature measuring costs. While balancing
+    costs, we find that an RL agent, trained with recurrent PPO, discovers adaptive measuring
+    policies that follow critical crop development stages, with results aligned by what domain
+    experts would consider a sensible approach. Our results highlight the importance of measuring
+    when crop feature measurements are not readily available.
+  summary: A reinforcement learning setting that balances the value of new measurements against
+    the cost of collecting them for agricultural decision making.
+  kind: Conference paper
+  badges:
+  - Reinforcement Learning
+  - Decision Support
+- slug: an-aerial-framework-for-multi-view-grape-bunch-detection-and-route-optimization-using-aco
+  scholar_id: PFwVicIAAAAJ:IjCSPb-OGe4C
+  title: An aerial framework for Multi-View grape bunch detection and route Optimization using
+    ACO
+  authors:
+  - Mar Ariza-Sentís
+  - Sergio Vélez
+  - Hilmy Baja
+  - Roberto G Valenti
+  - João Valente
+  authors_text: Mar Ariza-Sentís, Sergio Vélez, Hilmy Baja, Roberto G Valenti, João Valente
+  author_position: 3
+  venue: Computers and Electronics in Agriculture
+  year: 2024
+  citations: 12
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:IjCSPb-OGe4C
+  cited_by_url: https://scholar.google.com/scholar?cites=5101519124943558402
+  source_url: https://www.sciencedirect.com/science/article/pii/S0168169924003636
+  doi: 10.1016/j.compag.2024.108972
+  abstract: Typically, commercial orchards and vineyards consist of large fields that encounter
+    similar development phases at once. Thus, it becomes necessary to efficiently fly over
+    all fields to detect fruit and identify their status in a very limited timeframe. For
+    this purpose, Unmanned Aerial Vehicles (UAVs) path planning plays a pivotal role in agriculture
+    as it enables optimal coverage of agricultural fields, leading to enhanced data acquisition
+    and improved precision agriculture practices, for instance, disease assessment and pesticide
+    application. In addition, deep learning techniques offer precise image analysis. On the
+    one hand, object detection has been applied to agricultural fields to carry out a wide
+    range of operations, such as detecting apples and predicting yield in vineyards, with
+    higher detection accuracy when the fruits are fully visible. On the other hand, when crops
+    present leaf-occlusion, the algorithms face …
+  summary: A UAV framework for multi-view grape bunch detection paired with ant-colony-based
+    route optimization.
+  kind: Journal article
+  badges:
+  - UAV
+  - ACO
+- slug: object-detection-and-tracking-in-precision-farming-a-systematic-review
+  scholar_id: PFwVicIAAAAJ:UeHWp8X0CEIC
+  title: 'Object detection and tracking in Precision Farming: A systematic review'
+  authors:
+  - Mar Ariza-Sentís
+  - Sergio Vélez
+  - Raquel Martínez-Peña
+  - Hilmy Baja
+  - Joao Valente
+  authors_text: Mar Ariza-Sentís, Sergio Vélez, Raquel Martínez-Peña, Hilmy Baja, Joao Valente
+  author_position: 4
+  venue: Elsevier
+  year: 2024
+  citations: 128
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:UeHWp8X0CEIC
+  cited_by_url: https://scholar.google.com/scholar?cites=3320594224456832784
+  source_url: https://www.sciencedirect.com/science/article/pii/S0168169924001480
+  doi: 10.1016/j.compag.2024.108757
+  abstract: Object Detection and Tracking have gained importance in recent years because of
+    the great advances in image and video analysis techniques and the accurate results these
+    technologies are producing. Moreover, they have successfully been applied to multiple
+    fields, including the agricultural domain since they offer real-time monitoring of the
+    status of the crops and animals while counting how many are present within a field/barn.
+    This review aims to review the current literature on Object Detection and Tracking within
+    the field of Precision Farming. For that, over 300 research articles were explored, from
+    which 150 articles from the last five years were systematically reviewed and analysed
+    regarding the algorithms they implemented, the domain they belong to, the difficulties
+    they faced, and which limitations should be tackled in the future. Lastly, it examines
+    potential issues that this approach might have, for instance …
+  summary: A systematic review of precision farming research that applies object detection
+    and tracking methods.
+  kind: Journal article
+  badges:
+  - Systematic Review
+  - Precision Farming
+- slug: grape-counting-in-rgb-videoscomparing-two-instance-segmentation-models
+  scholar_id: PFwVicIAAAAJ:zYLM7Y9cAGgC
+  title: Grape counting in RGB videos–comparing two instance segmentation models
+  authors:
+  - M Ariza-Sentís
+  - S Vélez
+  - H Baja
+  - J Valente
+  authors_text: M Ariza-Sentís, S Vélez, H Baja, J Valente
+  author_position: 3
+  venue: Wageningen Academic
+  year: 2023
+  citations: 0
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:zYLM7Y9cAGgC
+  source_url: https://brill.com/edcollchap/book/9789086869473/BP000002.xml
+  abstract: The number of grape berries per bunch between pea-size and bunch closure stages
+    provides useful information to the farmer in planning and decision-making since it is
+    an early indicator of the final yield to be harvested. The aim of this study is to count
+    the number of grapes per cluster by comparing two different instance segmentation models
+    (YOLACT and Spatial Embeddings) trained on RGB videos acquired with a UAV. YOLACT tends
+    to undercount the number of grapes, with count estimations ranging from 0% to overcounts
+    of 148%. Nevertheless, the lowest estimation achieved by Spatial Embeddings is 30% and
+    the highest is 116%. In general, Spatial Embeddings segments and detects berries more
+    accurately than YOLACT.
+- slug: object-detection-and-tracking-on-uav-rgb-videos-for-early-extraction-of-grape-phenotypic-traits
+  scholar_id: PFwVicIAAAAJ:qjMakFHDy7sC
+  title: Object detection and tracking on UAV RGB videos for early extraction of grape phenotypic
+    traits
+  authors:
+  - Mar Ariza-Sentís
+  - Hilmy Baja
+  - Sergio Vélez
+  - João Valente
+  authors_text: Mar Ariza-Sentís, Hilmy Baja, Sergio Vélez, João Valente
+  author_position: 2
+  venue: Computers and Electronics in Agriculture
+  year: 2023
+  citations: 50
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:qjMakFHDy7sC
+  cited_by_url: https://scholar.google.com/scholar?cites=1647199720071929350
+  source_url: https://www.sciencedirect.com/science/article/pii/S0168169923004398
+  doi: 10.1016/j.compag.2023.108051
+  abstract: Grapevine phenotyping is the process of determining the physical properties (e.g.,
+    size, shape, and number) of grape bunches and berries. Grapevine phenotyping information
+    provides valuable characteristics to monitor the sanitary status of the vine. Knowing
+    the number and dimensions of bunches and berries at an early stage of development provides
+    relevant information to the winegrowers about the yield to be harvested. However, the
+    process of counting and measuring is usually done manually, which is laborious and time-consuming.
+    Previous studies have attempted to implement bunch detection on red bunches in vineyards
+    with leaf removal and surveys have been done using ground vehicles and handled cameras.
+    However, Unmanned Aerial Vehicles (UAV) mounted with RGB cameras, along with computer
+    vision techniques offer a cheap, robust, and timesaving alternative. Therefore, Multi-object
+    tracking …
+  summary: Deep-learning-based detection and tracking on UAV RGB videos for early grape phenotyping.
+  kind: Journal article
+  badges:
+  - UAV
+  - Phenotyping
+- slug: apple-mots-detection-segmentation-and-tracking-of-homogeneous-objects-using-mots
+  scholar_id: PFwVicIAAAAJ:Y0pCki6q_DkC
+  title: 'Apple mots: Detection, segmentation and tracking of homogeneous objects using mots'
+  authors:
+  - Stefan de Jong
+  - Hilmy Baja
+  - Karsjen Tamminga
+  - Joao Valente
+  authors_text: Stefan de Jong, Hilmy Baja, Karsjen Tamminga, Joao Valente
+  author_position: 2
+  venue: IEEE Robotics and Automation Letters
+  year: 2022
+  citations: 19
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:Y0pCki6q_DkC
+  cited_by_url: https://scholar.google.com/scholar?cites=12343540478201082289
+  source_url: https://ieeexplore.ieee.org/document/9857971
+  doi: 10.1109/LRA.2022.3199026
+  abstract: Current multi object tracking and segmentation (MOTS) methods made great progress
+    for the simultaneous detection and tracking of heterogeneous objects like cars and pedestrians.
+    Nevertheless, all of these scenes consisted of dissimilar objects, which are easier to
+    track than homogeneous and smaller objects, as those are more similar in appearance. Therefore,
+    this is the first paper that explores the implementation of MOTS algorithms for the simultaneous
+    detection and tracking of homogeneous objects. Towards this end, video data was acquired
+    in an apple orchard using a wearable camera and unmanned aerial vehicles (UAV). The dataset,
+    called APPLE MOTS, contains almost 86000 manually annotated apple masks and is the first
+    public dataset in which apple instances are temporally consistent labelled across frames.
+    Implementation of the MOTS architectures called TrackR-CNN and PointTrack indicates …
+  summary: Detection, segmentation, and tracking of homogeneous apple targets from UAV imagery.
+  kind: Journal article
+  badges:
+  - Segmentation
+  - Tracking
+- slug: dataset-for-benchmarking-multiple-object-tracking-and-segmentation-mots-in-an-apple-orchard-field
+  scholar_id: PFwVicIAAAAJ:2osOgNQ5qMEC
+  title: Dataset for benchmarking Multiple Object Tracking and Segmentation (MOTS) in an apple
+    orchard field.
+  authors:
+  - Stefan de Jong
+  - Hilmy Baja
+  - Joao Pereira Valente
+  authors_text: Stefan de Jong, Hilmy Baja, Joao Pereira Valente
+  author_position: 2
+  venue: Wageningen University & Research
+  year: 2022
+  citations: 0
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:2osOgNQ5qMEC
+  source_url: https://www.sidalc.net/search/Record/dig-wur-nl-wurpubs-602980/Description
+  abstract: A dataset of temporally consistent apple images and labels taken using UAVs and
+    a wearable sensor in an orchard, consisting of 86000 manually annotated apple instances
+    and 1700 frames annotated in the MOTS (Multi-object Tracking and Segmentation) style.
+- slug: random-weather-used-in-the-paper-adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning
+  scholar_id: PFwVicIAAAAJ:_FxGoFyzp5QC
+  title: Random weather used in the paper" Adaptive fertilizer management for optimizing nitrogen
+    use efficiency with constrained reinforcement learning"
+  authors:
+  - Hilmy Baja
+  authors_text: Hilmy Baja
+  author_position: 1
+  venue: Wageningen University & Research
+  citations: 0
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:_FxGoFyzp5QC
+  source_url: https://www.sidalc.net/search/Record/dig-wur-nl-wurpubs-649234/Description
+  abstract: 'This. csv is to be used in WOFOST PCSE. It is random weather generated with LARS-WG8,
+    parameterized from weather data taken from KNMI, from the location of Lelystad, the Netherlands.
+    Code: https://github. com/WUR-AI/NUE_PCSE-Gym'

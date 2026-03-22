@@ -1,72 +1,23 @@
 ---
-layout: default
+layout: page
 title: "Publications"
 permalink: /publications/
-publications:
-- title: "APPLE MOTS: Detection, Segmentation and Tracking of Homogeneous Objects Using MOTS"
-  authors: "S de Jong, H Baja, K Tamminga, J Valente"
-  journal: "IEEE Robotics and Automation Letters"
-  year: 2022
-  doi: "10.1109/LRA.2022.3199026"
-  link: "https://ieeexplore.ieee.org/document/9857971"
-
-- title: "Object detection and tracking on UAV RGB videos for early extraction of grape phenotypic traits"
-  authors: "M Ariza-Sentís, H Baja, S Vélez, J Valente"
-  journal: "Computers and Electronics in Agriculture"
-  year: 2023
-  doi: "10.1016/j.compag.2023.108051"
-  link: "https://www.sciencedirect.com/science/article/pii/S0168169923004398"
-
-- title: "An aerial framework for Multi-View grape bunch detection and route Optimization using ACO"
-  authors: "M Ariza-Sentís, S Vélez, H Baja, R Valenti, J Valente"
-  journal: "Computers and Electronics in Agriculture"
-  year: 2023
-  doi: "10.1016/j.compag.2024.108972"
-  link: "https://www.sciencedirect.com/science/article/pii/S0168169924003636"
-
-- title: "Object Detection and Tracking in Precision Farming: A Systematic Review"
-  authors: "M Ariza-Sentís, S Vélez, R Martínez-Peña, H Baja, J Valente"
-  journal: "Computers and Electronics in Agriculture"
-  year: 2024
-  doi: "10.1016/j.compag.2024.108757"
-  link: "https://www.sciencedirect.com/science/article/pii/S0168169924001480"
-
-- title: "Comparative analysis of single-view and multiple-view data collection strategies for detecting partially-occluded grape bunches: Field trials"
-  authors: "M Ariza-Sentís, H Baja, S Vélez, Rick van Essen, J Valente"
-  journal: "Journal of Agriculture and Food Research"
-  year: 2025
-  doi: "10.1016/j.jafr.2025.101736"
-  link: "https://www.sciencedirect.com/science/article/pii/S2666154325001073"
-
-- title: "To Measure or Not: A Cost-Sensitive, Selective Measuring Environment for Agricultural Management Decisions with Reinforcement Learning"
-  authors: "H Baja, M Kallenberg, I Athanasiadis"
-  journal: "AAAI Conference on Artificial Intelligence"
-  year: 2025
-  doi: "10.1609/aaai.v39i27.34999"
-  link: "https://ojs.aaai.org/index.php/AAAI/article/view/34999"
-
-- title: "Adaptive fertilization management for optimizing nitrogen use efficiency with constrained reinforcement learning"
-  authors: "H Baja, M Kallenberg, H Berghuijs, I Athanasiadis"
-  journal: "Computers and Electronics in Agriculture"
-  year: 2025
-  doi: "10.1016/j.compag.2025.110554"
-  link: "https://www.sciencedirect.com/science/article/pii/S016816992500660X"
 ---
 
-<h2>My Scientific Publications</h2>
+{% assign publications = site.data.publications.items | sort: "year" | reverse %}
 
-{% assign sorted_pubs = page.publications | sort: "year" | reverse %}
+<section class="publications-intro">
+  <p>
+    A continuously updated list of my publications, with quick badges for venue, topic, citations, DOI, and related material.
+    You can also browse the source profile on <a href="{{ site.scholar.profile_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+  </p>
+  {% if site.data.publications.generated_at %}
+    <p class="publications-sync-note">Last synced: {{ site.data.publications.generated_at | date: "%d %b %Y" }}</p>
+  {% endif %}
+</section>
 
-{% for pub in sorted_pubs %}
-  <div class="publication-entry">
-    <h3><a href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></h3>
-    <p><strong>Authors</strong>: {% assign formatted_authors = pub.authors | replace: "H Baja", "<strong>H Baja</strong>" %}
-        {{ formatted_authors }}</p>
-    <p><strong>Journal:</strong> {{ pub.journal }}</p>
-    <p><strong>Year:</strong> {{ pub.year }}</p>
-
-    {% if pub.doi %}
-      <p><strong>DOI:</strong> <a href="https://doi.org/{{ pub.doi }}" target="_blank">{{ pub.doi }}</a></p>
-    {% endif %}
-  </div>
-{% endfor %}
+<section class="publications-list">
+  {% for pub in publications %}
+    {% include publication_card.html publication=pub %}
+  {% endfor %}
+</section>

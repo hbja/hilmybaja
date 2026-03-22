@@ -6,6 +6,15 @@ url: "https://hilmybaja.com"
 highlighter: rouge
 permalink: /posts/:title/
 markdown: kramdown
+author:
+  full_name: "Hilmy Baja"
+  short_name: "H Baja"
+  name_variants:
+    - "Hilmy Baja"
+    - "H Baja"
+scholar:
+  user_id: "PFwVicIAAAAJ"
+  profile_url: "https://scholar.google.com/citations?user=PFwVicIAAAAJ&hl=en"
 
 collections:
   news:

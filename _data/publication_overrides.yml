@@ -1,0 +1,13 @@
+# Optional per-paper extras keyed by the publication slug in _data/publications.yml.
+# The sync script merges these values into the generated output so you can add
+# richer badges and links without fighting the Google Scholar import.
+#
+# Example:
+# to-measure-or-not-a-cost-sensitive-selective-measuring-environment-for-agricultural-management-decisions-with-reinforcement-learning:
+#   badges:
+#     - "Reinforcement Learning"
+#     - "Decision Support"
+#   links:
+#     pdf: "https://example.com/paper.pdf"
+#     code: "https://github.com/your/repo"
+{}

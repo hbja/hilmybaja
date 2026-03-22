@@ -1,0 +1,106 @@
+{% assign pub = include.publication %}
+{% assign title_link = pub.source_url | default: pub.links.paper | default: pub.scholar_url %}
+{% assign author_markup = pub.authors_text %}
+
+{% if site.author.full_name %}
+  {% capture author_full_replacement %}<strong>{{ site.author.full_name }}</strong>{% endcapture %}
+  {% assign author_markup = author_markup | replace: site.author.full_name, author_full_replacement %}
+{% endif %}
+
+{% if site.author.short_name %}
+  {% capture author_short_replacement %}<strong>{{ site.author.short_name }}</strong>{% endcapture %}
+  {% assign author_markup = author_markup | replace: site.author.short_name, author_short_replacement %}
+{% endif %}
+
+<article class="publication-card">
+  <h3 class="publication-card__title">
+    {% if title_link %}
+      <a href="{{ title_link }}" target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+    {% else %}
+      {{ pub.title }}
+    {% endif %}
+  </h3>
+
+  {% if author_markup %}
+    <p class="publication-card__authors">{{ author_markup }}</p>
+  {% endif %}
+
+  <div class="publication-badges publication-badges--meta">
+    {% if pub.venue %}
+      <span class="publication-badge publication-badge-muted">{{ pub.venue }}</span>
+    {% endif %}
+
+    {% if pub.year %}
+      <span class="publication-badge publication-badge-muted">{{ pub.year }}</span>
+    {% endif %}
+
+    {% if pub.author_position == 1 %}
+      <span class="publication-badge publication-badge-accent">First author</span>
+    {% endif %}
+
+    {% if pub.kind %}
+      <span class="publication-badge">{{ pub.kind }}</span>
+    {% endif %}
+
+    {% if pub.citations and pub.citations > 0 %}
+      {% if pub.cited_by_url %}
+        <a class="publication-badge publication-badge-link" href="{{ pub.cited_by_url }}" target="_blank" rel="noopener noreferrer">Cited by {{ pub.citations }}</a>
+      {% else %}
+        <span class="publication-badge publication-badge-muted">Cited by {{ pub.citations }}</span>
+      {% endif %}
+    {% endif %}
+
+    {% if pub.badges %}
+      {% for badge in pub.badges %}
+        <span class="publication-badge">{{ badge }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <div class="publication-links">
+    {% assign paper_link = pub.source_url | default: pub.links.paper %}
+    {% if paper_link %}
+      <a class="publication-link" href="{{ paper_link }}" target="_blank" rel="noopener noreferrer">Paper</a>
+    {% endif %}
+
+    {% if pub.scholar_url %}
+      <a class="publication-link" href="{{ pub.scholar_url }}" target="_blank" rel="noopener noreferrer">Scholar</a>
+    {% endif %}
+
+    {% if pub.doi %}
+      <a class="publication-link" href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+    {% endif %}
+
+    {% if pub.links.pdf %}
+      <a class="publication-link" href="{{ pub.links.pdf }}" target="_blank" rel="noopener noreferrer">PDF</a>
+    {% endif %}
+
+    {% if pub.links.project %}
+      <a class="publication-link" href="{{ pub.links.project }}" target="_blank" rel="noopener noreferrer">Project</a>
+    {% endif %}
+
+    {% if pub.links.code %}
+      <a class="publication-link" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+    {% endif %}
+
+    {% if pub.links.dataset %}
+      <a class="publication-link" href="{{ pub.links.dataset }}" target="_blank" rel="noopener noreferrer">Dataset</a>
+    {% endif %}
+
+    {% if pub.links.slides %}
+      <a class="publication-link" href="{{ pub.links.slides }}" target="_blank" rel="noopener noreferrer">Slides</a>
+    {% endif %}
+
+    {% if pub.links.video %}
+      <a class="publication-link" href="{{ pub.links.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+    {% endif %}
+  </div>
+
+  {% assign longform_text = pub.summary | default: pub.abstract %}
+  {% if longform_text %}
+    <details class="publication-details">
+      <summary>Summary</summary>
+      <p>{{ longform_text }}</p>
+    </details>
+  {% endif %}
+</article>

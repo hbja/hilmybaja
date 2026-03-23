@@ -13,6 +13,29 @@
     {% endif %}
 
     <title>{{ page.title }}</title>
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var storageKey = "theme-preference";
+        var theme = "light";
+
+        try {
+          var storedTheme = localStorage.getItem(storageKey);
+          if (storedTheme === "light" || storedTheme === "dark") {
+            theme = storedTheme;
+          } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          }
+        } catch (error) {
+          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            theme = "dark";
+          }
+        }
+
+        root.setAttribute("data-theme", theme);
+        root.style.colorScheme = theme;
+      })();
+    </script>
 
     <!-- Standard Favicon -->
     <link rel="icon" type="image/x-icon" href="../images/ico/favicon.ico">
@@ -51,9 +74,69 @@
       </div> <!-- /site -->
 
       <div class='footer'>
-        Powered by <a href='http://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel.
+        <span class="footer-note">Powered by <a href='http://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel.</span>
+        <button class='theme-toggle' type='button' data-theme-toggle aria-label='Switch theme' aria-pressed='false'>Dark mode</button>
       </div>
     </div> <!-- /container -->
     {% include footer-analytics.html %}
+    <script>
+      (function() {
+        var root = document.documentElement;
+        var storageKey = "theme-preference";
+        var button = document.querySelector("[data-theme-toggle]");
+        if (!button) {
+          return;
+        }
+
+        function getTheme() {
+          return root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+        }
+
+        function updateButton(theme) {
+          var isDark = theme === "dark";
+          button.textContent = isDark ? "Light mode" : "Dark mode";
+          button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+          button.setAttribute("aria-pressed", String(isDark));
+        }
+
+        function applyTheme(theme) {
+          root.setAttribute("data-theme", theme);
+          root.style.colorScheme = theme;
+          updateButton(theme);
+        }
+
+        applyTheme(getTheme());
+
+        button.addEventListener("click", function() {
+          var nextTheme = getTheme() === "dark" ? "light" : "dark";
+          applyTheme(nextTheme);
+          try {
+            localStorage.setItem(storageKey, nextTheme);
+          } catch (error) {
+          }
+        });
+
+        if (!window.matchMedia) {
+          return;
+        }
+
+        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        var syncWithSystem = function(event) {
+          try {
+            if (localStorage.getItem(storageKey)) {
+              return;
+            }
+          } catch (error) {
+          }
+          applyTheme(event.matches ? "dark" : "light");
+        };
+
+        if (mediaQuery.addEventListener) {
+          mediaQuery.addEventListener("change", syncWithSystem);
+        } else if (mediaQuery.addListener) {
+          mediaQuery.addListener(syncWithSystem);
+        }
+      })();
+    </script>
   </body>
 </html>

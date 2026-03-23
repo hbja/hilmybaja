@@ -18,6 +18,9 @@ items:
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:ufrVoPGSRksC
   cited_by_url: https://scholar.google.com/scholar?cites=7866896150403150782
   source_url: https://www.sciencedirect.com/science/article/pii/S016816992500660X
+  cover_image: /images/publication-covers/compag-2025-adaptive.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
+    article page
   abstract: Optimizing nitrogen use efficiency (NUE) in crop production is crucial for sustainable
     agriculture, balancing the need to maximize yield while minimizing environmental impacts
     such as nitrogen loss and soil nutrient depletion. Reinforcement learning (RL) emerges
@@ -48,6 +51,9 @@ items:
   cited_by_url: https://scholar.google.com/scholar?cites=16256750753950846048
   source_url: https://www.sciencedirect.com/science/article/pii/S2666154325001073
   doi: 10.1016/j.jafr.2025.101736
+  cover_image: /images/publication-covers/jafr-2025-comparative.gif
+  cover_alt: Journal of Agriculture and Food Research journal cover linked from the
+    article page
   abstract: 'Extracting phenotypic traits of grape bunch is crucial for accurately monitoring
     grape quality, health, and yield estimation. This is important for optimising resources,
     enhancing marketing strategies, and boosting overall agricultural productivity. While
@@ -150,6 +156,8 @@ items:
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:LkGwnXOMwfcC
   cited_by_url: https://scholar.google.com/scholar?cites=1695124404679175434
   source_url: https://www.sciencedirect.com/science/article/pii/S2772375525006434
+  cover_image: /images/publication-covers/sat-2025-interoperable.gif
+  cover_alt: Smart Agricultural Technology journal cover linked from the article page
   abstract: 'Digital twins and artificial intelligence are increasingly explored to support
     decision-making. In this work, we introduce a modular and interoperable architecture that
     combines digital twins with reinforcement learning for adaptive decision-making in complex
@@ -218,6 +226,9 @@ items:
   cited_by_url: https://scholar.google.com/scholar?cites=5101519124943558402
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169924003636
   doi: 10.1016/j.compag.2024.108972
+  cover_image: /images/publication-covers/compag-2024-aerial.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
+    article page
   abstract: Typically, commercial orchards and vineyards consist of large fields that encounter
     similar development phases at once. Thus, it becomes necessary to efficiently fly over
     all fields to detect fruit and identify their status in a very limited timeframe. For
@@ -253,6 +264,9 @@ items:
   cited_by_url: https://scholar.google.com/scholar?cites=3320594224456832784
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169924001480
   doi: 10.1016/j.compag.2024.108757
+  cover_image: /images/publication-covers/compag-2024-review.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
+    article page
   abstract: Object Detection and Tracking have gained importance in recent years because of
     the great advances in image and video analysis techniques and the accurate results these
     technologies are producing. Moreover, they have successfully been applied to multiple
@@ -312,6 +326,9 @@ items:
   cited_by_url: https://scholar.google.com/scholar?cites=1647199720071929350
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169923004398
   doi: 10.1016/j.compag.2023.108051
+  cover_image: /images/publication-covers/compag-2023-uav.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
+    article page
   abstract: Grapevine phenotyping is the process of determining the physical properties (e.g.,
     size, shape, and number) of grape bunches and berries. Grapevine phenotyping information
     provides valuable characteristics to monitor the sanitary status of the vine. Knowing

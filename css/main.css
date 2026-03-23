@@ -275,58 +275,78 @@ h1, h2, h3, h4, h5, h6, strong { color: var(--bold-text-color); }
   text-transform: uppercase;
 }
 
-/* Group news items by year */
-.news-year {
-  margin-bottom: 20px;
-}
-
-.news-year h5 {
-  border-bottom: 1px solid var(--border-color);
+.news-intro {
   color: var(--muted-text-color);
-  padding-bottom: 5px;
-  text-align: left;
+  font-size: 0.92em;
+  line-height: 1.7;
+  margin: 0 0 22px 0 !important;
 }
 
-/* News Items */
+.news-list {
+  display: grid;
+  gap: 0;
+}
+
 .news-item {
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
+  border-bottom: 1px solid rgba(172, 176, 190, 0.18);
   display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 20px;
-  padding: 16px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
 }
 
-/* News Image */
+.news-item:first-child {
+  padding-top: 0;
+}
+
+.news-item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 .news-image {
-  border-radius: 14px;
-  height: 92px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  height: 74px;
   object-fit: cover;
-  width: 92px;
+  width: 74px;
 }
 
-/* News Text */
 .news-text {
   flex: 1;
-  line-height: 1.45;
-  font-size: 16px;
-  text-align: justify;
+  min-width: 0;
 }
 
-.news-text h5 {
-  margin: 0;
+.news-text h4 {
+  font-size: 1.02em;
+  line-height: 1.45;
+  margin: 4px 0 0 0;
 }
 
 .news-excerpt {
-  margin: 5px 0;
+  font-size: 0.9em;
+  line-height: 1.7;
+  margin: 8px 0 0 0;
   color: var(--muted-text-color);
 }
 
+.news-excerpt p {
+  margin: 0 !important;
+}
+
+.news-excerpt p + p {
+  margin-top: 10px !important;
+}
+
 .news-date {
-  font-size: 14px;
   color: var(--muted-text-color);
+  display: block;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.68em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
 
 .publication-entry {
@@ -570,13 +590,69 @@ hr {
 }
 
 .publication-card {
+  align-items: start;
   border-bottom: 1px solid var(--border-color);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 94px minmax(0, 1fr);
   padding: 0 0 24px 0;
 }
 
 .publication-card:last-child {
   border-bottom: 0;
   padding-bottom: 0;
+}
+
+.publication-card__cover {
+  width: 94px;
+}
+
+.publication-cover-image,
+.publication-cover-placeholder {
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.publication-cover-image {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(239, 241, 245, 0.96));
+  border: 1px solid rgba(172, 176, 190, 0.28);
+  object-fit: contain;
+  padding: 12px;
+}
+
+.publication-cover-placeholder {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(230, 233, 239, 0.92));
+  border: 1px solid var(--border-color);
+  color: var(--bold-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.publication-cover-placeholder__eyebrow {
+  color: var(--muted-text-color);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.5em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.publication-cover-placeholder__year {
+  font-size: 1.35em;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.publication-cover-placeholder__venue {
+  font-size: 0.62em;
+  line-height: 1.35;
 }
 
 .publication-card__title {
@@ -684,6 +760,226 @@ hr {
   margin: 12px 0 0 0 !important;
 }
 
+.resume-shell {
+  display: grid;
+  gap: 28px;
+}
+
+.resume-hero,
+.resume-panel {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(172, 176, 190, 0.2);
+  border-radius: 24px;
+}
+
+.resume-hero {
+  padding: 28px;
+}
+
+.resume-eyebrow {
+  color: var(--muted-text-color);
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 12px 0 !important;
+  text-transform: uppercase;
+}
+
+.resume-hero__heading {
+  align-items: start;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+}
+
+.resume-name {
+  color: var(--bold-text-color);
+  font-size: 2.1em;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 !important;
+}
+
+.resume-role {
+  color: var(--muted-text-color);
+  font-size: 1em;
+  line-height: 1.7;
+  margin: 12px 0 0 0 !important;
+  max-width: 34em;
+}
+
+.resume-summary {
+  font-size: 0.98em;
+  line-height: 1.8;
+  margin: 22px 0 0 0 !important;
+  max-width: 42em;
+}
+
+.resume-cta,
+.resume-chip,
+.resume-tag {
+  border-radius: 999px;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.resume-cta {
+  background: rgba(136, 57, 239, 0.08);
+  border: 1px solid rgba(136, 57, 239, 0.16);
+  color: var(--accent-color);
+  display: inline-flex;
+  padding: 11px 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-cta:hover {
+  background: rgba(136, 57, 239, 0.12);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.resume-meta,
+.resume-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.resume-meta {
+  margin-top: 22px;
+}
+
+.resume-chip,
+.resume-tag {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-color);
+  color: var(--bold-text-color);
+  display: inline-flex;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.resume-chip--link:hover {
+  background: var(--surface-color);
+  border-color: rgba(136, 57, 239, 0.16);
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.resume-tag-row {
+  margin-top: 18px;
+}
+
+.resume-layout {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.resume-panel {
+  padding: 24px;
+}
+
+.resume-panel--wide {
+  grid-column: 1 / -1;
+}
+
+.resume-panel h2 {
+  border-bottom: 0 !important;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.8em !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin: 0 0 18px 0 !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+}
+
+.resume-panel > p:first-of-type {
+  margin-top: 0 !important;
+}
+
+.resume-entry + .resume-entry {
+  border-top: 1px solid rgba(172, 176, 190, 0.18);
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.resume-entry__heading {
+  align-items: baseline;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.resume-entry__heading h3 {
+  font-size: 1.02em !important;
+  line-height: 1.45;
+  margin: 0 !important;
+}
+
+.resume-entry__date {
+  color: var(--muted-text-color);
+  flex-shrink: 0;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.resume-entry__org,
+.resume-entry__detail,
+.resume-panel__footnote {
+  color: var(--muted-text-color);
+}
+
+.resume-entry__org {
+  font-size: 0.92em;
+  margin: 6px 0 10px 0 !important;
+}
+
+.resume-entry p {
+  margin: 10px 0 0 0 !important;
+}
+
+.resume-entry__detail,
+.resume-panel__footnote {
+  font-size: 0.9em;
+  line-height: 1.7;
+}
+
+.resume-list {
+  margin: 12px 0 0 18px !important;
+}
+
+.resume-list li + li {
+  margin-top: 8px;
+}
+
+.resume-list--tight li + li {
+  margin-top: 10px;
+}
+
+.resume-skill-block + .resume-skill-block {
+  margin-top: 14px;
+}
+
+.resume-skill-block p {
+  margin: 0 !important;
+}
+
+.resume-skill-block p + p {
+  color: var(--muted-text-color);
+  margin-top: 6px !important;
+}
+
 @media screen and (max-width: 500px) {
   body { font-size: 16px; }
   .site .post h2.title { font-size: 1.5em; }
@@ -696,12 +992,12 @@ hr {
   .top-nav-link { padding: 0 5px; }
   .news-item {
     flex-direction: column;
-    text-align: center;
+    gap: 12px;
   }
 
   .news-image {
-    width: 80px;
-    height: 80px;
+    height: 68px;
+    width: 68px;
   }
 
   .profile-image {
@@ -738,6 +1034,41 @@ hr {
   }
 
   .publication-card {
+    gap: 14px;
+    grid-template-columns: 72px minmax(0, 1fr);
     padding-bottom: 20px;
+  }
+
+  .publication-card__cover {
+    width: 72px;
+  }
+
+  .publication-cover-placeholder {
+    border-radius: 14px;
+    padding: 10px;
+  }
+
+  .resume-hero,
+  .resume-panel {
+    border-radius: 20px;
+  }
+
+  .resume-hero,
+  .resume-panel {
+    padding: 20px;
+  }
+
+  .resume-hero__heading,
+  .resume-entry__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .resume-name {
+    font-size: 1.7em;
+  }
+
+  .resume-layout {
+    grid-template-columns: 1fr;
   }
 }

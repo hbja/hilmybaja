@@ -7,7 +7,31 @@
 #   badges:
 #     - "Reinforcement Learning"
 #     - "Decision Support"
+#   cover_image: "/images/publication-covers/example.gif"
+#   cover_alt: "Journal cover for Example Journal"
 #   links:
 #     pdf: "https://example.com/paper.pdf"
 #     code: "https://github.com/your/repo"
-{}
+adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning:
+  cover_image: "/images/publication-covers/compag-2025-adaptive.gif"
+  cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
+
+comparative-analysis-of-single-view-and-multiple-view-data-collection-strategies-for-detecting-partially-occluded-grape-bunches-field-trials:
+  cover_image: "/images/publication-covers/jafr-2025-comparative.gif"
+  cover_alt: "Journal of Agriculture and Food Research journal cover linked from the article page"
+
+interoperable-agricultural-digital-twins-with-reinforcement-learning-intelligence:
+  cover_image: "/images/publication-covers/sat-2025-interoperable.gif"
+  cover_alt: "Smart Agricultural Technology journal cover linked from the article page"
+
+an-aerial-framework-for-multi-view-grape-bunch-detection-and-route-optimization-using-aco:
+  cover_image: "/images/publication-covers/compag-2024-aerial.gif"
+  cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
+
+object-detection-and-tracking-in-precision-farming-a-systematic-review:
+  cover_image: "/images/publication-covers/compag-2024-review.gif"
+  cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
+
+object-detection-and-tracking-on-uav-rgb-videos-for-early-extraction-of-grape-phenotypic-traits:
+  cover_image: "/images/publication-covers/compag-2023-uav.gif"
+  cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"

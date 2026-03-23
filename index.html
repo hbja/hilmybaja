@@ -64,33 +64,23 @@ balloon_css: true
 <!-- News Section -->
 <div class="news-section">
   <h3>Latest News</h3>
+  <p class="news-intro">A few recent research updates, talks, and paper milestones.</p>
 
   {% assign sorted_news = site.news | sort: "date" | reverse %}
-
-  {% assign grouped_news = sorted_news | group_by_exp: "news", "news.date | date: '%Y'" %}
-
-  {% for year in grouped_news %}
-    <div class="news-year">
-      <h5>{{ year.name }}</h5>
-
-      <div class="news-list">
-        {% for news in year.items %}
-        <div class="news-item">
-          {% if news.image %}
-            <img src="{{ news.image }}" alt="News Image" class="news-image">
-          {% endif %}
-          <div class="news-text">
-            <h4>{{ news.title }}</h4>
-
-            <p class="news-excerpt">{% capture md_excerpt %}{{ news.excerpt }}{% endcapture %}{{ md_excerpt | markdownify }}</p>
-
-            <span class="news-date">{{ news.date | date: "%d %b %Y" }}</span>
-          </div>
-        </div>
-        {% endfor %}
+  <div class="news-list">
+    {% for news in sorted_news %}
+    <article class="news-item">
+      {% if news.image %}
+        <img src="{{ news.image }}" alt="{{ news.title }}" class="news-image">
+      {% endif %}
+      <div class="news-text">
+        <p class="news-date">{{ news.date | date: "%d %b %Y" }}</p>
+        <h4>{{ news.title }}</h4>
+        <div class="news-excerpt">{% capture md_excerpt %}{{ news.excerpt }}{% endcapture %}{{ md_excerpt | markdownify }}</div>
       </div>
-    </div>
-  {% endfor %}
+    </article>
+    {% endfor %}
+  </div>
 </div>
 
 <div class='posts'>

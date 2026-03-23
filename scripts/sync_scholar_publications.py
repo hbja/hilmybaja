@@ -26,6 +26,8 @@ SCALAR_FIELDS_TO_MERGE = (
     "kind",
     "featured",
     "selected",
+    "cover_image",
+    "cover_alt",
 )
 
 LINK_FIELDS = ("paper", "pdf", "project", "code", "dataset", "slides", "video")

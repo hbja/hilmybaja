@@ -18,6 +18,8 @@ items:
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:ufrVoPGSRksC
   cited_by_url: https://scholar.google.com/scholar?cites=7866896150403150782
   source_url: https://www.sciencedirect.com/science/article/pii/S016816992500660X
+  links:
+    code: https://github.com/WUR-AI/NUE_PCSE-Gym
   cover_image: /images/publication-covers/compag-2025-adaptive.gif
   cover_alt: Computers and Electronics in Agriculture journal cover linked from the
     article page
@@ -118,6 +120,8 @@ items:
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:W7OEmFMy1HYC
   cited_by_url: https://scholar.google.com/scholar?cites=15242709951261013011
   source_url: https://essd.copernicus.org/preprints/essd-2025-83/
+  links:
+    code: https://github.com/WUR-AI/AgML-CY-Bench
   abstract: 'In-season, pre-harvest crop yield forecasts are essential for enhancing transparency
     in commodity markets and improving food security. They play a key role in increasing resilience
     to climate change and extreme events and thus contribute to the United Nations’ Sustainable
@@ -257,7 +261,7 @@ items:
   - Joao Valente
   authors_text: Mar Ariza-Sentís, Sergio Vélez, Raquel Martínez-Peña, Hilmy Baja, Joao Valente
   author_position: 4
-  venue: Elsevier
+  venue: Computers and Electronics in Agriculture
   year: 2024
   citations: 128
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:UeHWp8X0CEIC

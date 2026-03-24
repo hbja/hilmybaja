@@ -19,6 +19,7 @@ PUBLICATIONS_PATH = ROOT / "_data" / "publications.yml"
 OVERRIDES_PATH = ROOT / "_data" / "publication_overrides.yml"
 
 SCALAR_FIELDS_TO_MERGE = (
+    "venue",
     "doi",
     "source_url",
     "summary",

@@ -668,16 +668,16 @@ hr {
 
 .publications-list {
   display: grid;
-  gap: 24px;
+  gap: 16px;
 }
 
 .publication-card {
   align-items: start;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--subtle-divider-color);
   display: grid;
-  gap: 18px;
-  grid-template-columns: 94px minmax(0, 1fr);
-  padding: 0 0 24px 0;
+  gap: 12px;
+  grid-template-columns: 64px minmax(0, 1fr);
+  padding: 0 0 14px 0;
 }
 
 .publication-card:last-child {
@@ -686,13 +686,13 @@ hr {
 }
 
 .publication-card__cover {
-  width: 94px;
+  width: 64px;
 }
 
 .publication-cover-image,
 .publication-cover-placeholder {
   aspect-ratio: 3 / 4;
-  border-radius: 16px;
+  border-radius: 12px;
   display: block;
   overflow: hidden;
   width: 100%;
@@ -702,7 +702,7 @@ hr {
   background: var(--image-frame-background);
   border: 1px solid var(--image-frame-border-color);
   object-fit: contain;
-  padding: 12px;
+  padding: 7px;
 }
 
 .publication-cover-placeholder {
@@ -712,13 +712,13 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 12px;
+  padding: 8px;
 }
 
 .publication-cover-placeholder__eyebrow {
   color: var(--muted-text-color);
   font-family: "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 0.5em;
+  font-size: 0.42em;
   font-weight: 700;
   letter-spacing: 0.1em;
   line-height: 1.4;
@@ -726,19 +726,19 @@ hr {
 }
 
 .publication-cover-placeholder__year {
-  font-size: 1.35em;
+  font-size: 1em;
   letter-spacing: -0.04em;
   line-height: 1;
 }
 
 .publication-cover-placeholder__venue {
-  font-size: 0.62em;
+  font-size: 0.52em;
   line-height: 1.35;
 }
 
 .publication-card__title {
-  font-size: 1.15em;
-  line-height: 1.45;
+  font-size: 1em;
+  line-height: 1.35;
   margin: 0;
 }
 
@@ -747,31 +747,31 @@ hr {
 }
 
 .publication-card__authors {
-  font-size: 0.88em;
-  line-height: 1.7;
-  margin: 10px 0 0 0 !important;
+  font-size: 0.82em;
+  line-height: 1.55;
+  margin: 6px 0 0 0 !important;
 }
 
 .publication-badges,
 .publication-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+  gap: 6px;
+  margin-top: 9px;
 }
 
 .publication-badges--meta {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .publication-badge,
 .publication-link {
   border-radius: 999px;
-  font-size: 0.66em;
+  font-size: 0.6em;
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1;
-  padding: 8px 11px;
+  padding: 6px 9px;
   text-transform: uppercase;
 }
 
@@ -792,6 +792,17 @@ hr {
   color: var(--accent-color);
 }
 
+.publication-badge-metric {
+  background: transparent;
+  border-color: var(--subtle-divider-color);
+  color: var(--muted-text-color);
+}
+
+.publication-badge__suffix {
+  margin-left: 4px;
+  opacity: 0.75;
+}
+
 .publication-badge-link,
 .publication-link {
   background: var(--surface-pill-color);
@@ -800,6 +811,10 @@ hr {
   display: inline-flex;
   text-decoration: none;
   transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.publication-link--github {
+  border-color: var(--accent-border-color);
 }
 
 .publication-badge-link:hover,
@@ -812,13 +827,13 @@ hr {
 }
 
 .publication-details {
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .publication-details summary {
   color: var(--bold-text-color);
   cursor: pointer;
-  font-size: 0.85em;
+  font-size: 0.78em;
   font-weight: 700;
   list-style: none;
 }
@@ -836,9 +851,9 @@ hr {
 }
 
 .publication-details p {
-  font-size: 0.88em;
-  line-height: 1.7;
-  margin: 12px 0 0 0 !important;
+  font-size: 0.82em;
+  line-height: 1.6;
+  margin: 10px 0 0 0 !important;
 }
 
 .resume-shell {
@@ -1115,18 +1130,18 @@ hr {
   }
 
   .publication-card {
-    gap: 14px;
-    grid-template-columns: 72px minmax(0, 1fr);
-    padding-bottom: 20px;
+    gap: 10px;
+    grid-template-columns: 54px minmax(0, 1fr);
+    padding-bottom: 14px;
   }
 
   .publication-card__cover {
-    width: 72px;
+    width: 54px;
   }
 
   .publication-cover-placeholder {
     border-radius: 14px;
-    padding: 10px;
+    padding: 7px;
   }
 
   .resume-hero,

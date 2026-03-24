@@ -15,6 +15,8 @@
 adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning:
   cover_image: "/images/publication-covers/compag-2025-adaptive.gif"
   cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
+  links:
+    code: "https://github.com/WUR-AI/NUE_PCSE-Gym"
 
 comparative-analysis-of-single-view-and-multiple-view-data-collection-strategies-for-detecting-partially-occluded-grape-bunches-field-trials:
   cover_image: "/images/publication-covers/jafr-2025-comparative.gif"
@@ -29,9 +31,14 @@ an-aerial-framework-for-multi-view-grape-bunch-detection-and-route-optimization-
   cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
 
 object-detection-and-tracking-in-precision-farming-a-systematic-review:
+  venue: "Computers and Electronics in Agriculture"
   cover_image: "/images/publication-covers/compag-2024-review.gif"
   cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
 
 object-detection-and-tracking-on-uav-rgb-videos-for-early-extraction-of-grape-phenotypic-traits:
   cover_image: "/images/publication-covers/compag-2023-uav.gif"
   cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"
+
+cy-bench-a-comprehensive-benchmark-dataset-for-sub-national-crop-yield-forecasting:
+  links:
+    code: "https://github.com/WUR-AI/AgML-CY-Bench"

@@ -1,0 +1,18 @@
+# Optional venue-level metrics keyed by the slugified venue name.
+# Use this for compact journal badges such as Clarivate Impact Factor (IF),
+# quartile labels, and Journal Citation Indicator (JCI).
+
+computers-and-electronics-in-agriculture:
+  clarivate_if: "8.9"
+
+journal-of-agriculture-and-food-research:
+  clarivate_if: "6.2"
+
+smart-agricultural-technology:
+  clarivate_if: "5.7"
+
+ieee-robotics-and-automation-letters:
+  clarivate_if: "4.3"
+  clarivate_quartile: "Q2"
+  jci: "1.26"
+  metric_year: "2023"

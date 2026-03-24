@@ -16,7 +16,7 @@ date: 2026-03-23
     </div>
 
     <p class="resume-summary">
-      I work at Wageningen University &amp; Research on practical artificial intelligence for farm management, with a current focus on fertilizer optimization, selective measuring, and interoperable digital-twin systems.
+      I work at Wageningen University &amp; Research on practical artificial intelligence for data-driven decision making.
     </p>
 
     <div class="resume-meta">
@@ -31,9 +31,10 @@ date: 2026-03-23
 
   <div class="resume-layout">
     <section class="resume-panel resume-panel--wide">
-      <h2>Current Focus</h2>
+      <h2>Interests</h2>
       <p>
-        My research explores how reinforcement learning and interoperable AI systems can support more sustainable agricultural decisions, especially around fertilizer use, crop monitoring, and operational farm intelligence.
+        My research explores how reinforcement learning and interoperable AI systems can support more sustainable agricultural decisions.
+        I am also particularly interested in diving more into world models for dynamic systems and continual RL; something I haven't explored during my PhD.
       </p>
       <div class="resume-tag-row">
         <span class="resume-tag">Reinforcement Learning</span>
@@ -138,7 +139,7 @@ date: 2026-03-23
       <article class="resume-entry">
         <div class="resume-entry__heading">
           <h3>Smart Droplets</h3>
-          <span class="resume-entry__date">2022-present</span>
+          <span class="resume-entry__date">2022-2026</span>
         </div>
         <p class="resume-entry__org">European Commission, Horizon Europe</p>
         <p>Developing AI- and digital-twin-based decision support to help reduce pesticide and fertilizer use in practical farm settings.</p>
@@ -183,22 +184,6 @@ date: 2026-03-23
         </div>
         <p>Featured in coverage on AI for agricultural decision making.</p>
       </article>
-    </section>
-
-    <section class="resume-panel">
-      <h2>Skills</h2>
-      <div class="resume-skill-block">
-        <p><strong>Languages</strong></p>
-        <p>Indonesian (native), English (IELTS 8.0, TOEFL iBT 109), German (B2).</p>
-      </div>
-      <div class="resume-skill-block">
-        <p><strong>Technical</strong></p>
-        <p>Python, R, MATLAB, C, C++, MS Office, crop growth modelling.</p>
-      </div>
-      <div class="resume-skill-block">
-        <p><strong>Methodological</strong></p>
-        <p>Experimental design, machine learning, deep learning, reinforcement learning, time-series modelling, and data-driven decision making.</p>
-      </div>
     </section>
   </div>
 </div>

@@ -3,8 +3,16 @@
 {% assign author_markup = pub.authors_text %}
 {% assign venue_slug = pub.venue | slugify %}
 {% assign venue_cover = site.data.venue_covers[venue_slug] %}
+{% assign venue_metrics = site.data.venue_metrics[venue_slug] %}
 {% assign cover_image = pub.cover_image | default: venue_cover.image %}
 {% assign cover_alt = pub.cover_alt | default: venue_cover.alt | default: pub.venue %}
+{% assign paper_link = pub.source_url | default: pub.links.paper %}
+{% assign code_link = pub.links.code | default: pub.links.github %}
+{% assign code_link_lower = code_link | downcase %}
+{% assign code_link_label = "Code" %}
+{% if code_link_lower contains "github.com" %}
+  {% assign code_link_label = "GitHub" %}
+{% endif %}
 
 {% if site.author.full_name %}
   {% capture author_full_replacement %}<strong>{{ site.author.full_name }}</strong>{% endcapture %}
@@ -59,6 +67,21 @@
         <span class="publication-badge">{{ pub.kind }}</span>
       {% endif %}
 
+      {% if venue_metrics.clarivate_if %}
+        <span class="publication-badge publication-badge-metric">
+          IF {{ venue_metrics.clarivate_if }}
+          {% if venue_metrics.metric_year %}<span class="publication-badge__suffix">{{ venue_metrics.metric_year }}</span>{% endif %}
+        </span>
+      {% endif %}
+
+      {% if venue_metrics.clarivate_quartile %}
+        <span class="publication-badge publication-badge-metric">{{ venue_metrics.clarivate_quartile }}</span>
+      {% endif %}
+
+      {% if venue_metrics.jci %}
+        <span class="publication-badge publication-badge-metric">JCI {{ venue_metrics.jci }}</span>
+      {% endif %}
+
       {% if pub.citations and pub.citations > 0 %}
         {% if pub.cited_by_url %}
           <a class="publication-badge publication-badge-link" href="{{ pub.cited_by_url }}" target="_blank" rel="noopener noreferrer">Cited by {{ pub.citations }}</a>
@@ -75,7 +98,6 @@
     </div>
 
     <div class="publication-links">
-      {% assign paper_link = pub.source_url | default: pub.links.paper %}
       {% if paper_link %}
         <a class="publication-link" href="{{ paper_link }}" target="_blank" rel="noopener noreferrer">Paper</a>
       {% endif %}
@@ -96,8 +118,8 @@
         <a class="publication-link" href="{{ pub.links.project }}" target="_blank" rel="noopener noreferrer">Project</a>
       {% endif %}
 
-      {% if pub.links.code %}
-        <a class="publication-link" href="{{ pub.links.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+      {% if code_link %}
+        <a class="publication-link publication-link--github" href="{{ code_link }}" target="_blank" rel="noopener noreferrer">{{ code_link_label }}</a>
       {% endif %}
 
       {% if pub.links.dataset %}

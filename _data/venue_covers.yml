@@ -1,0 +1,38 @@
+# Official venue or publisher artwork keyed by the slugified venue name.
+# These are local assets so publication cards stay stable even if remote URLs change.
+
+computers-and-electronics-in-agriculture:
+  image: "/images/venue-covers/elsevier.svg"
+  alt: "Elsevier artwork for Computers and Electronics in Agriculture"
+
+journal-of-agriculture-and-food-research:
+  image: "/images/venue-covers/elsevier.svg"
+  alt: "Elsevier artwork for Journal of Agriculture and Food Research"
+
+earth-system-science-data-discussions:
+  image: "/images/venue-covers/copernicus.png"
+  alt: "Copernicus artwork for Earth System Science Data Discussions"
+
+smart-agricultural-technology:
+  image: "/images/venue-covers/elsevier.svg"
+  alt: "Elsevier artwork for Smart Agricultural Technology"
+
+proceedings-of-the-aaai-conference-on-artificial-intelligence:
+  image: "/images/venue-covers/aaai-proceedings-cover.jpg"
+  alt: "AAAI conference proceedings cover"
+
+elsevier:
+  image: "/images/venue-covers/elsevier.svg"
+  alt: "Elsevier publisher artwork"
+
+wageningen-academic:
+  image: "/images/venue-covers/wur.png"
+  alt: "Wageningen University and Research artwork for Wageningen Academic"
+
+ieee-robotics-and-automation-letters:
+  image: "/images/venue-covers/ieee-ras-square.jpg"
+  alt: "IEEE Robotics and Automation Society artwork for IEEE Robotics and Automation Letters"
+
+wageningen-university-research:
+  image: "/images/venue-covers/wur.png"
+  alt: "Wageningen University and Research artwork"

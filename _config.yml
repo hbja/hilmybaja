@@ -16,6 +16,9 @@ scholar:
   user_id: "PFwVicIAAAAJ"
   profile_url: "https://scholar.google.com/citations?user=PFwVicIAAAAJ&hl=en"
 
+cloudflare_web_analytics:
+  token: "e8ac7c27f6114c9ea3848378b7e5e686"
+
 collections:
   news:
     output: false

@@ -1,6 +1,37 @@
-generated_at: '2026-03-22T12:56:00+00:00'
+generated_at: '2026-06-04T20:58:34+00:00'
 source: google-scholar
 items:
+- slug: detection-driven-key-frame-edge-offloading-for-real-time-uav-grape-bunch-mots
+  scholar_id: PFwVicIAAAAJ:Se3iqnhoufwC
+  title: Detection-Driven Key-Frame Edge Offloading for Real-Time UAV Grape Bunch MOTS
+  authors:
+  - Zhen Cao
+  - Lammert Kooistra
+  - Hilmy Baja
+  - Wensheng Wang
+  - João Valente
+  authors_text: Zhen Cao, Lammert Kooistra, Hilmy Baja, Wensheng Wang, João Valente
+  author_position: 3
+  venue: IEEE Transactions on AgriFood Electronics
+  year: 2026
+  citations: 0
+  scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:Se3iqnhoufwC
+  source_url: https://ieeexplore.ieee.org/abstract/document/11457748/
+  abstract: Real-time instance-level perception is required for UAV operations in vineyards,
+    but on-board compute and rural uplinks preclude full-frame streaming and large models.
+    We develop an edge-offloading pipeline in which a TensorRT-accelerated YOLOv8n on a Jetson
+    Xavier NX performs detection-driven key-frame selection and region-of-interest (ROI) compression,
+    while multiobject tracking and segmentation (MOTS) runs on an edge server. The onboard
+    selector filters redundant frames using Intersection-over-Union matching. A three-thread
+    parallelized schedule overlaps detection, selection, and compression. On two vineyard
+    sequences (frontal and path-planned), FP16 TensorRT reduced detector latency by 48% (to
+    27.5 ms). The proposed offloading strategy discarded 54–69% of redundant frames, reducing
+    bandwidth consumption to 23–27% via ROI-centric compression. While the end-to-end throughput
+    ( 1 …
+  badges:
+  - Edge AI
+  - UAV
+  - MOTS
 - slug: adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning
   scholar_id: PFwVicIAAAAJ:ufrVoPGSRksC
   title: Adaptive fertilizer management for optimizing nitrogen use efficiency with constrained
@@ -14,15 +45,10 @@ items:
   author_position: 1
   venue: Computers and Electronics in Agriculture
   year: 2025
-  citations: 5
+  citations: 6
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:ufrVoPGSRksC
   cited_by_url: https://scholar.google.com/scholar?cites=7866896150403150782
   source_url: https://www.sciencedirect.com/science/article/pii/S016816992500660X
-  links:
-    code: https://github.com/WUR-AI/NUE_PCSE-Gym
-  cover_image: /images/publication-covers/compag-2025-adaptive.gif
-  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
-    article page
   abstract: Optimizing nitrogen use efficiency (NUE) in crop production is crucial for sustainable
     agriculture, balancing the need to maximize yield while minimizing environmental impacts
     such as nitrogen loss and soil nutrient depletion. Reinforcement learning (RL) emerges
@@ -34,6 +60,11 @@ items:
     aspects to investigate the capability of RL to optimize NUE through crop growth model
     simulations. We develop an RL agent with a novel NUE reward function and incorporates
     action constrains. We …
+  cover_image: /images/publication-covers/compag-2025-adaptive.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the article
+    page
+  links:
+    code: https://github.com/WUR-AI/NUE_PCSE-Gym
 - slug: comparative-analysis-of-single-view-and-multiple-view-data-collection-strategies-for-detecting-partially-occluded-grape-bunches-field-trials
   scholar_id: PFwVicIAAAAJ:eQOLeE2rZwMC
   title: 'Comparative analysis of single-view and multiple-view data collection strategies
@@ -53,9 +84,6 @@ items:
   cited_by_url: https://scholar.google.com/scholar?cites=16256750753950846048
   source_url: https://www.sciencedirect.com/science/article/pii/S2666154325001073
   doi: 10.1016/j.jafr.2025.101736
-  cover_image: /images/publication-covers/jafr-2025-comparative.gif
-  cover_alt: Journal of Agriculture and Food Research journal cover linked from the
-    article page
   abstract: 'Extracting phenotypic traits of grape bunch is crucial for accurately monitoring
     grape quality, health, and yield estimation. This is important for optimising resources,
     enhancing marketing strategies, and boosting overall agricultural productivity. While
@@ -70,6 +98,9 @@ items:
   summary: An analysis of how single-view and multiple-view field data collection strategies
     affect grape bunch detection under occlusion.
   kind: Journal article
+  cover_image: /images/publication-covers/jafr-2025-comparative.gif
+  cover_alt: Journal of Agriculture and Food Research journal cover linked from the article
+    page
   badges:
   - Field Trials
   - Multi-View
@@ -116,12 +147,10 @@ items:
   author_position: 4
   venue: Earth System Science Data Discussions
   year: 2025
-  citations: 6
+  citations: 11
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:W7OEmFMy1HYC
   cited_by_url: https://scholar.google.com/scholar?cites=15242709951261013011
   source_url: https://essd.copernicus.org/preprints/essd-2025-83/
-  links:
-    code: https://github.com/WUR-AI/AgML-CY-Bench
   abstract: 'In-season, pre-harvest crop yield forecasts are essential for enhancing transparency
     in commodity markets and improving food security. They play a key role in increasing resilience
     to climate change and extreme events and thus contribute to the United Nations’ Sustainable
@@ -141,6 +170,8 @@ items:
     have been pre-processed, standardized, and harmonized across spatio-temporal scales. With
     CY-Bench, we aim to: (i) establish a standardized framework for developing and evaluating
     data-driven models …'
+  links:
+    code: https://github.com/WUR-AI/AgML-CY-Bench
 - slug: interoperable-agricultural-digital-twins-with-reinforcement-learning-intelligence
   scholar_id: PFwVicIAAAAJ:LkGwnXOMwfcC
   title: Interoperable agricultural digital twins with reinforcement learning intelligence
@@ -156,12 +187,10 @@ items:
   author_position: 2
   venue: Smart Agricultural Technology
   year: 2025
-  citations: 3
+  citations: 7
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:LkGwnXOMwfcC
   cited_by_url: https://scholar.google.com/scholar?cites=1695124404679175434
   source_url: https://www.sciencedirect.com/science/article/pii/S2772375525006434
-  cover_image: /images/publication-covers/sat-2025-interoperable.gif
-  cover_alt: Smart Agricultural Technology journal cover linked from the article page
   abstract: 'Digital twins and artificial intelligence are increasingly explored to support
     decision-making. In this work, we introduce a modular and interoperable architecture that
     combines digital twins with reinforcement learning for adaptive decision-making in complex
@@ -173,6 +202,8 @@ items:
     that generate recommendations for pesticide and fertilizer application—the first to demonstrate
     interoperable reinforcement learning-integrated digital twins in operational agriculture;
     and (c) the development of a FIWARE-based …'
+  cover_image: /images/publication-covers/sat-2025-interoperable.gif
+  cover_alt: Smart Agricultural Technology journal cover linked from the article page
 - slug: to-measure-or-not-a-cost-sensitive-selective-measuring-environment-for-agricultural-management-decisions-with-reinforcement-learning
   scholar_id: PFwVicIAAAAJ:YsMSGLbcyi4C
   title: 'To Measure or Not: A Cost-Sensitive, Selective Measuring Environment for Agricultural
@@ -225,14 +256,11 @@ items:
   author_position: 3
   venue: Computers and Electronics in Agriculture
   year: 2024
-  citations: 12
+  citations: 18
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:IjCSPb-OGe4C
   cited_by_url: https://scholar.google.com/scholar?cites=5101519124943558402
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169924003636
   doi: 10.1016/j.compag.2024.108972
-  cover_image: /images/publication-covers/compag-2024-aerial.gif
-  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
-    article page
   abstract: Typically, commercial orchards and vineyards consist of large fields that encounter
     similar development phases at once. Thus, it becomes necessary to efficiently fly over
     all fields to detect fruit and identify their status in a very limited timeframe. For
@@ -247,6 +275,9 @@ items:
   summary: A UAV framework for multi-view grape bunch detection paired with ant-colony-based
     route optimization.
   kind: Journal article
+  cover_image: /images/publication-covers/compag-2024-aerial.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the article
+    page
   badges:
   - UAV
   - ACO
@@ -263,14 +294,11 @@ items:
   author_position: 4
   venue: Computers and Electronics in Agriculture
   year: 2024
-  citations: 128
+  citations: 150
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:UeHWp8X0CEIC
   cited_by_url: https://scholar.google.com/scholar?cites=3320594224456832784
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169924001480
   doi: 10.1016/j.compag.2024.108757
-  cover_image: /images/publication-covers/compag-2024-review.gif
-  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
-    article page
   abstract: Object Detection and Tracking have gained importance in recent years because of
     the great advances in image and video analysis techniques and the accurate results these
     technologies are producing. Moreover, they have successfully been applied to multiple
@@ -285,6 +313,9 @@ items:
   summary: A systematic review of precision farming research that applies object detection
     and tracking methods.
   kind: Journal article
+  cover_image: /images/publication-covers/compag-2024-review.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the article
+    page
   badges:
   - Systematic Review
   - Precision Farming
@@ -325,14 +356,11 @@ items:
   author_position: 2
   venue: Computers and Electronics in Agriculture
   year: 2023
-  citations: 50
+  citations: 52
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:qjMakFHDy7sC
   cited_by_url: https://scholar.google.com/scholar?cites=1647199720071929350
   source_url: https://www.sciencedirect.com/science/article/pii/S0168169923004398
   doi: 10.1016/j.compag.2023.108051
-  cover_image: /images/publication-covers/compag-2023-uav.gif
-  cover_alt: Computers and Electronics in Agriculture journal cover linked from the
-    article page
   abstract: Grapevine phenotyping is the process of determining the physical properties (e.g.,
     size, shape, and number) of grape bunches and berries. Grapevine phenotyping information
     provides valuable characteristics to monitor the sanitary status of the vine. Knowing
@@ -346,6 +374,9 @@ items:
     tracking …
   summary: Deep-learning-based detection and tracking on UAV RGB videos for early grape phenotyping.
   kind: Journal article
+  cover_image: /images/publication-covers/compag-2023-uav.gif
+  cover_alt: Computers and Electronics in Agriculture journal cover linked from the article
+    page
   badges:
   - UAV
   - Phenotyping
@@ -361,7 +392,7 @@ items:
   author_position: 2
   venue: IEEE Robotics and Automation Letters
   year: 2022
-  citations: 19
+  citations: 21
   scholar_url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=PFwVicIAAAAJ&citation_for_view=PFwVicIAAAAJ:Y0pCki6q_DkC
   cited_by_url: https://scholar.google.com/scholar?cites=12343540478201082289
   source_url: https://ieeexplore.ieee.org/document/9857971

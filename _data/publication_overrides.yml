@@ -12,6 +12,12 @@
 #   links:
 #     pdf: "https://example.com/paper.pdf"
 #     code: "https://github.com/your/repo"
+detection-driven-key-frame-edge-offloading-for-real-time-uav-grape-bunch-mots:
+  badges:
+    - "Edge AI"
+    - "UAV"
+    - "MOTS"
+
 adaptive-fertilizer-management-for-optimizing-nitrogen-use-efficiency-with-constrained-reinforcement-learning:
   cover_image: "/images/publication-covers/compag-2025-adaptive.gif"
   cover_alt: "Computers and Electronics in Agriculture journal cover linked from the article page"

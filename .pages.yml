@@ -1,0 +1,131 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: news
+    label: News
+    type: collection
+    path: _news
+    operations:
+      rename: false
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: excerpt
+        label: Update
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+      - name: image
+        label: Image (optional)
+        type: image
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+        description: Enable to show this entry on the website. Drafts are still public on GitHub.
+
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: _posts
+    operations:
+      rename: false
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+        options:
+          time: true
+          format: yyyy-MM-dd HH:mm:ss
+      - name: layout
+        type: string
+        hidden: true
+        default: post
+      - name: categories
+        label: Category
+        type: select
+        options:
+          multiple: false
+          values: [ai, awk, books, community, elixir, functional-programming, git, haskell, io, javascript, jekyll, logseq, mongodb, open-source, operating-systems, osx, personal, phoenix, photography, programming, rails, refactoring, reviews, ruby, sed, videogames, vim, zsh]
+      - name: body
+        label: Post
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+        description: Enable to show this entry on the website. Drafts are still public on GitHub.
+
+  - name: videogames
+    label: Videogames
+    type: collection
+    path: _videogames
+    operations:
+      rename: false
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        label: Date finished
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: platforms
+        type: string
+        description: "For example: PC, PS1"
+      - name: genres
+        type: string
+        description: "For example: Action RPG, Fantasy"
+      - name: excerpt
+        label: Short summary
+        type: text
+      - name: images
+        label: Screenshots
+        type: image
+        list: true
+      - name: body
+        label: Your thoughts
+        type: rich-text
+        options:
+          format: markdown
+          switcher: true
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+        description: Enable to show this entry on the website. Drafts are still public on GitHub.

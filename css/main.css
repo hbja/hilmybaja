@@ -45,6 +45,7 @@
   --code-text: #fff8df;
   --selection: rgba(25, 113, 194, 0.24);
   --shadow-ink: rgba(45, 45, 45, 0.18);
+  --collage-opacity: 0.18;
   --font-display: "Excalifont", "Comic Sans MS", cursive;
   --font-body: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   --font-ui: "Avenir Next", "Segoe UI", system-ui, sans-serif;
@@ -108,6 +109,7 @@
   --code-text: #f9f3de;
   --selection: rgba(116, 192, 252, 0.3);
   --shadow-ink: rgba(0, 0, 0, 0.38);
+  --collage-opacity: 0.12;
 }
 
 * {
@@ -219,6 +221,10 @@ h3,
   width: 1px;
 }
 
+.side-collage {
+  display: none;
+}
+
 .align-right {
   float: right;
 }
@@ -237,6 +243,72 @@ h3,
   margin: 0 auto;
   max-width: var(--content-width);
   padding: 34px 30px 44px;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1320px) {
+  .side-collage {
+    bottom: 0;
+    display: block;
+    opacity: var(--collage-opacity);
+    overflow: hidden;
+    padding: 22px clamp(12px, 1.35vw, 22px);
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: calc((100vw - var(--content-width)) / 2);
+    z-index: 0;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
+  }
+
+  .side-collage--left {
+    left: 0;
+  }
+
+  .side-collage--right {
+    right: 0;
+  }
+
+  .side-collage__track {
+    align-content: space-evenly;
+    display: grid;
+    gap: clamp(8px, 0.9vw, 14px);
+    grid-auto-rows: minmax(62px, 92px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 100%;
+  }
+
+  .side-collage--right .side-collage__track {
+    transform: translateY(-24px);
+  }
+
+  .side-collage__tile {
+    align-self: center;
+    aspect-ratio: 1;
+    filter: saturate(0.82);
+    height: 100%;
+    justify-self: center;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .side-collage__tile:nth-child(3n + 1) {
+    transform: rotate(-3deg);
+  }
+
+  .side-collage__tile:nth-child(3n + 2) {
+    transform: rotate(2.25deg);
+  }
+
+  .side-collage__tile:nth-child(5n) {
+    transform: rotate(-1deg) scale(0.9);
+  }
+
+  :root[data-theme="dark"] .side-collage__tile {
+    filter: brightness(1.18) saturate(0.72);
+  }
 }
 
 .container > .header {

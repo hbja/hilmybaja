@@ -79,6 +79,22 @@
     {% include analytics.html %}
   </head>
   <body>
+    {% assign collage_left = "01,03,05,07,09,11,13,15,17,19,21,23,25,27,29,31" | split: "," %}
+    {% assign collage_right = "02,04,06,08,10,12,14,16,18,20,22,24,26,28" | split: "," %}
+    <aside class="side-collage side-collage--left" aria-hidden="true">
+      <div class="side-collage__track">
+        {% for tile in collage_left %}
+          <img class="side-collage__tile" src="/images/side-collage/tile-{{ tile }}.png" alt="" loading="lazy" decoding="async">
+        {% endfor %}
+      </div>
+    </aside>
+    <aside class="side-collage side-collage--right" aria-hidden="true">
+      <div class="side-collage__track">
+        {% for tile in collage_right %}
+          <img class="side-collage__tile" src="/images/side-collage/tile-{{ tile }}.png" alt="" loading="lazy" decoding="async">
+        {% endfor %}
+      </div>
+    </aside>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <div class='container'>
       <header class='header'>
@@ -96,7 +112,7 @@
       </main>
 
       <footer class='footer'>
-        <span class="footer-note">Powered by <a href='https://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel.</span>
+        <span class="footer-note">Powered by <a href='https://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel. Collage icons via <a href="https://www.flaticon.com/" rel="external">Flaticon</a>.</span>
         <button class='theme-toggle' type='button' data-theme-toggle aria-label='Switch theme' aria-pressed='false'>Dark mode</button>
       </footer>
     </div>

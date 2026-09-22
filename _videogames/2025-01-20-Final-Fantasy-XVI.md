@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Final Fantasy XVI"
 date: 2025-01-20
 platforms: "PC"
@@ -34,5 +35,4 @@ help Valisthea's social structure, allowing people to live and die by their own 
  Although, I felt the story somehow fell a bit flat at the end. Maybe due to
 the antagonists dying one-by-one throughout the story, leaving a big gap of where the cast was with only the big baddie at
 the end. Was not my favorite FF story, or even FF game in general for sure, but it is one that was quite memorable.
-
 

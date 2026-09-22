@@ -1,4 +1,5 @@
 ---
+published: true
 title: "I am a speaker in WUR's Dies Natalis!"
 date: 2025-02-01
 excerpt: "I will be speaking in WUR's 107th Dies Natalis! The theme will be about AI for Sustainable Futures.

@@ -6,15 +6,17 @@ permalink: /videogames/
 
 <h2>Thoughts about video games I played in the past</h2>
 
-{% assign sorted_games = site.videogames | sort: "date" | reverse %}
+{% assign sorted_games = site.videogames | where_exp: "game", "game.published != false" | sort: "date" | reverse %}
 
 {% for game in sorted_games %}
   <div class="videogame-entry">
 
     <!-- Collapsible button -->
-    <button class="collapsible">{{ game.title }} (year finished: {{ game.date | date: "%Y" }})</button>
+    <button class="collapsible" type="button" aria-expanded="false" aria-controls="game-{{ forloop.index }}">
+      {{ game.title }} (year finished: {{ game.date | date: "%Y" }})
+    </button>
 
-    <div class="game-content">
+    <div class="game-content" id="game-{{ forloop.index }}" hidden>
       <p><strong>Platforms:</strong> {{ game.platforms }}</p>
       <p><strong>Genres:</strong> {{ game.genres }}</p>
       <p class="game-excerpt">{{ game.excerpt }}</p>
@@ -33,4 +35,4 @@ permalink: /videogames/
     <hr>
   </div>
 {% endfor %}
-<script src="../js/collapse.js"></script>
+<script src="/js/collapse.js"></script>

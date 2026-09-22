@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title:  "I got married!"
 date:   2024-12-14 12:00:00
@@ -36,4 +37,3 @@ It was a great and tiring day.
 After the whole thing, we had to quickly pack to fly back to the Netherlands the coming day.
 
 As I reminisce, it's quite an achievement getting married in the middle of doing a PhD.
-

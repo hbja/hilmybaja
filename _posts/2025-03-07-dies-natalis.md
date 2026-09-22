@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title:  "I was a speaker in WUR's 107th Dies Natalis!"
 date:   2025-03-07 12:00:00

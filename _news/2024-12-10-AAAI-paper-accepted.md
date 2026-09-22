@@ -1,4 +1,5 @@
 ---
+published: true
 title: "AAAI paper accepted!"
 date: 2024-12-10
 excerpt: "My first PhD paper was accepted to the AAAI conference held in Philadelphia, USA!

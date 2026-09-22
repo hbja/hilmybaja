@@ -30,6 +30,13 @@ collections:
     permalink: /publications/:title/
 
 
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from

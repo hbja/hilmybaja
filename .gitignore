@@ -3,3 +3,7 @@ _site
 .DS_Store
 .jekyll-metadata
 notes.txt
+.jekyll-cache
+.venv/
+__pycache__/
+*.pyc

@@ -1,4 +1,5 @@
 ---
+published: true
 layout: post
 title:  "Hello, world; it's Hilmy!"
 date:   2024-12-20 12:00:00

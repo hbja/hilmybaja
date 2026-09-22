@@ -1,4 +1,5 @@
 ---
+published: true
 title: "Published a computer vision paper."
 date: 2025-02-14
 excerpt: "My collaboration paper about comparing data collection methods with a UAV for grape bunch tracking

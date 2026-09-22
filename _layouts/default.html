@@ -4,15 +4,37 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
     <meta name="author" content="Hilmy Baja">
-    <meta name="description" content="{{ site.description }}">
+
+    {%- if page.description %}
+      {%- assign page_description = page.description %}
+    {%- else %}
+      {%- assign page_description = site.description %}
+    {%- endif %}
+    <meta name="description" content="{{ page_description }}">
 
     {%- if page.og_image %}
-      {% assign og_image = page.og_image %}
-    {% else %}
-      {% assign og_image = "word-cloud.png" %}
-    {% endif %}
+      {%- assign og_image = page.og_image %}
+    {%- else %}
+      {%- assign og_image = "hilmy.jpg" %}
+    {%- endif %}
+    {%- if page.title %}
+      {%- assign page_title = page.title %}
+    {%- else %}
+      {%- assign page_title = site.title %}
+    {%- endif %}
 
-    <title>{{ page.title }}</title>
+    <title>{{ page_title }}</title>
+
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_description }}">
+    <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+    <meta property="og:image" content="{{ og_image | prepend: '/images/' | absolute_url }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_description }}">
+    <meta name="theme-color" content="#f7f1e7">
     <script>
       (function() {
         var root = document.documentElement;
@@ -23,28 +45,27 @@
           var storedTheme = localStorage.getItem(storageKey);
           if (storedTheme === "light" || storedTheme === "dark") {
             theme = storedTheme;
-          } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            theme = "dark";
           }
         } catch (error) {
-          if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            theme = "dark";
-          }
         }
 
         root.setAttribute("data-theme", theme);
         root.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').setAttribute(
+          "content",
+          theme === "dark" ? "#161814" : "#f7f1e7"
+        );
       })();
     </script>
 
     <!-- Standard Favicon -->
-    <link rel="icon" type="image/x-icon" href="../images/ico/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/ico/favicon.ico">
 
     <!-- PNG Favicon -->
-    <link rel="icon" type="image/png" href="../images/ico/favicon.png">
+    <link rel="icon" type="image/png" href="/images/ico/favicon.png">
 
     <!-- Apple Touch Icon (for mobile devices) -->
-    <link rel="apple-touch-icon" href="../images/ico/favicon.png">
+    <link rel="apple-touch-icon" href="/images/ico/favicon.png">
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}/feed.xml">
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
@@ -58,26 +79,27 @@
     {% include analytics.html %}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class='container'>
-      <div class='header'>
+      <header class='header'>
         <span class='site-title'><a href='/'>{{ site.name }}</a></span>
-        <span class='links align-right'>
-          <a class='top-nav-link' href='/about/'>About</a>
-          <a class='top-nav-link' href='/resume/'>Resume</a>
-          <a class='top-nav-link' href='/publications/'>Publications</a>
-          <a class='top-nav-link' href='/videogames/'>Video Games</a>
-        </span>
-      </div>
+        <nav class='links align-right' aria-label='Primary navigation'>
+          <a class='top-nav-link{% if page.url == "/about/" %} is-active{% endif %}' href='/about/'{% if page.url == "/about/" %} aria-current='page'{% endif %}>About</a>
+          <a class='top-nav-link{% if page.url == "/resume/" %} is-active{% endif %}' href='/resume/'{% if page.url == "/resume/" %} aria-current='page'{% endif %}>Resume</a>
+          <a class='top-nav-link{% if page.url contains "/publications/" %} is-active{% endif %}' href='/publications/'{% if page.url contains "/publications/" %} aria-current='page'{% endif %}>Publications</a>
+          <a class='top-nav-link{% if page.url contains "/videogames/" %} is-active{% endif %}' href='/videogames/'{% if page.url contains "/videogames/" %} aria-current='page'{% endif %}>Video Games</a>
+        </nav>
+      </header>
 
-      <div class='site'>
+      <main class='site' id='main-content'>
         {{ content }}
-      </div> <!-- /site -->
+      </main>
 
-      <div class='footer'>
-        <span class="footer-note">Powered by <a href='http://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel.</span>
+      <footer class='footer'>
+        <span class="footer-note">Powered by <a href='https://jekyllrb.com'>Jekyll</a>. Profile photo by Sven Menschel.</span>
         <button class='theme-toggle' type='button' data-theme-toggle aria-label='Switch theme' aria-pressed='false'>Dark mode</button>
-      </div>
-    </div> <!-- /container -->
+      </footer>
+    </div>
     {% include footer-analytics.html %}
     <script>
       (function() {
@@ -102,7 +124,12 @@
         function applyTheme(theme) {
           root.setAttribute("data-theme", theme);
           root.style.colorScheme = theme;
+          var themeMeta = document.querySelector('meta[name="theme-color"]');
+          if (themeMeta) {
+            themeMeta.setAttribute("content", theme === "dark" ? "#161814" : "#f7f1e7");
+          }
           updateButton(theme);
+          window.dispatchEvent(new CustomEvent("site-theme-change", { detail: { theme: theme } }));
         }
 
         applyTheme(getTheme());
@@ -115,27 +142,6 @@
           } catch (error) {
           }
         });
-
-        if (!window.matchMedia) {
-          return;
-        }
-
-        var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-        var syncWithSystem = function(event) {
-          try {
-            if (localStorage.getItem(storageKey)) {
-              return;
-            }
-          } catch (error) {
-          }
-          applyTheme(event.matches ? "dark" : "light");
-        };
-
-        if (mediaQuery.addEventListener) {
-          mediaQuery.addEventListener("change", syncWithSystem);
-        } else if (mediaQuery.addListener) {
-          mediaQuery.addListener(syncWithSystem);
-        }
       })();
     </script>
   </body>

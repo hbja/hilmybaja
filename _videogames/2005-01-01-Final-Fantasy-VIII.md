@@ -1,15 +1,14 @@
 ---
-title: "Final Fantasy VIII"
+title: Final Fantasy VIII
 date: 2005-01-01
-platforms: "PC, PS1"
-genres: "Turn-based Active RPG"
-excerpt: "My favorite Final Fantasy game."
+platforms: PC, PS1, Nintendo Switch
+genres: Turn-based Active RPG
+excerpt: My favorite Final Fantasy game.
 images:
   - ../images/videogames/ff8.png
   - ../images/videogames/ff8_1.png
-
+published: false
 ---
-
 Final Fantasy VIII.
 
 This is my first ever final fantasy.
@@ -38,5 +37,4 @@ It was rumored that the Junction system was tough even for adults to understand.
 The tutorial that the game offered was not helpful at all, so I ended up pushing through the game without understanding things.
 Despite that, I had SO much fun
 ...
-
 

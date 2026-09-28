@@ -3,7 +3,8 @@ name: Sync publications from Google Scholar
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * 1"
+    - cron: "17 6 1 * *"
+      timezone: "Europe/Amsterdam"
 
 permissions:
   contents: write
@@ -14,10 +15,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
@@ -28,7 +29,7 @@ jobs:
         run: python scripts/sync_scholar_publications.py
 
       - name: Commit updated publication data
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: sync publications from Google Scholar"
           file_pattern: _data/publications.yml

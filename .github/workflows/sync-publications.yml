@@ -23,7 +23,9 @@ jobs:
           python-version: "3.12"
 
       - name: Install sync dependencies
-        run: python -m pip install --upgrade pip pyyaml scholarly
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install pyyaml scholarly "bibtexparser~=1.0"
 
       - name: Sync publication data
         run: python scripts/sync_scholar_publications.py

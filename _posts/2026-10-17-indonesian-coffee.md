@@ -22,15 +22,15 @@ I wanted to try it to see what it was all about. It was, meh. About cold coffee,
 
 I had a chance to try a [Panama Gesha](https://en.wikipedia.org/wiki/Geisha_(coffee)), cultivated from Indonesia! If you don't know, Panama Gesha is quite a popular and well-regarded coffee type, well-known (especially in the community) for its unique taste.
 
-![IMG_0893.jpeg](blob:https:/app.pagescms.org/ee9f69d7-255e-4aed-a19b-637e3e97b0e6)
+![IMG_0893.jpeg](/images/IMG_0893.jpeg)
 
-I thoroughly enjoyed this iced V60 that was served to me in Makmur Jaya, Bandung. I also took a photo of the receipt I see. It was a 7 euro cup; worth every penny.
+I thoroughly enjoyed this iced V60 that was served to me in *Makmur Jaya,* Bandung. I also took a photo that shows the receipt, I see. It was a 7 euro cup; worth every penny.
 
-Also had a classic Cortado with some Indonesian arabica blend.
+Also had a classic Cortado with some Indonesian arabica blend. Very nice and velvety.
 
 ![IMG_0924.jpeg](/images/IMG_0924.jpeg)
 
-Also, wasn't complaining about a seahorse on my latte.
+Also, wasn't complaining about a seahorse on my latte. This one was quite bitter. Could be because the chocolate powder sprinkled on top.
 
 ![IMG_1026.jpeg](/images/IMG_1026.jpeg)
 
